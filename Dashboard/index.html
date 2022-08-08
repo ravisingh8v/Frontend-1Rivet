@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <!-- Icon Style link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Styling Css Link  -->
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<style>
+</style>
+
+<body>
+    <!-- All Content Wrapper -->
+    <div class="wrapper d-flex flex-direction-column h-100">
+        <!-- Header Wrapper -->
+        <header id="header" class="d-flex justify-between w-100">
+
+            <!-- Header Left Side Wrapper  -->
+            <div class="d-flex align-center justify-between h-left-wrapper">
+                <!-- side bar toggle icon  -->
+                <div class="align-center">
+                    <label for="toggleSidebar">
+                        <span class="fas fa-solid fa-clone c-pointer"></span>
+                    </label>
+                </div>
+                <!-- search-box  -->
+
+                <div class="d-flex align-center search-box">
+                    <label for="search-icon"><span class="fas fa-thin fa-magnifying-glass icon"></span></label>
+                    <input class="unset" type="text" id="search-icon" placeholder="Search for transection, item etc." />
+                    <a href="#"><button class="unset btn btn-primary">Search</button></a>
+
+                </div>
+            </div>
+
+            <!-- Header right side wrapper  -->
+
+            <div class="d-flex align-center">
+                <a href="#" class="notification">
+                    <span class="fas fa-thin fa-comment-dots icon"></span>
+                </a>
+                <a href="#" class="notification">
+                    <span class="fas fa-thin fa-bell icon"></span>
+                </a>
+                <!-- dropdown image wrapper  -->
+                <div class="profile">
+                    <label for="dropdown" class="c-pointer"><img src="Assets/Images/profile.jpg" alt="Profile pic"
+                            class="profile-img" /></label>
+                </div>
+                <!-- drop down icon -->
+                <a href="#" id="dropdown"><span class=" fas fa-thin fa-angle-down icon c-pointer"></span></a>
+            </div>
+        </header>
+        <!-- header end  -->
+
+        <!-- Wrapper for sidebar and main content  -->
+        <section class="d-flex main-section h-100 flex-grow-1">
+            <!-- sidebar section start  -->
+            <div class="sidebar-wrapper">
+                <input type="checkbox" id="toggleSidebar" checked>
+                <aside id="sidebar"
+                    class="d-flex flex-direction-column align-center justify-between h-100 flex-shrink-0">
+                    <ul class="ul1">
+
+                        <div class="ul-div ">
+                            <li class="active">
+                                <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                        class="fa-brands fa-windows icon "></label><span
+                                        class="menu-text">Dashboard</span> </a>
+                            </li>
+                        </div>
+                        <div class="ul-div">
+                            <li class="">
+                                <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                        class="fas fa-solid fa-cart-arrow-down icon "></label><span
+                                        class="menu-text">Cart</span> </a>
+                            </li>
+                        </div>
+                        <div class="ul-div">
+                            <li class="">
+                                <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                        class="fa-solid fa-file-lines icon "></label><span
+                                        class="menu-text">Document</span> </a>
+                            </li>
+                        </div>
+                        <div class="ul-div">
+                            <li class="">
+                                <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                        class="fa-solid fa-gear icon "></label><span class="menu-text">Setting</span>
+                                </a>
+                            </li>
+                        </div>
+
+                    </ul>
+                    <!-- 2nd ul li -->
+                    <ul class="ul2">
+                        <div class="ul-div">
+                            <li class="">
+                                <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                        class="fa-solid fa-circle-exclamation icon "></label><span
+                                        class="menu-text">Trash</span> </a>
+                            </li>
+                        </div>
+                        <div class="ul-div">
+                            <li class="">
+                                <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                        class="fas fa-regular fa-arrow-right-from-bracket icon"></label><span
+                                        class="menu-text">Log out</span> </a>
+                            </li>
+                        </div>
+                    </ul>
+                </aside>
+            </div>
+
+            <!-- ===============main content wrapper ===============-->
+            <div class="main-wrapper d-flex flex-direction-column w-100">
+                <!-- Main Content Here  -->
+                <main id="main" class="d-flex flex-direction-column flex-grow-1">
+                    <h1>Dashboard</h1>
+                    <!-- Dashboard Card Wrapper  -->
+                    <div class="d-flex justify-between row ">
+                        <!-- wrapper card 1  -->
+                        <div class="card-wrapper">
+                            <div class="card card1 c-pointer">
+                                <div class="eye-icon-wrapper">
+                                    <span class="fa-solid fa-eye"></span>
+                                </div>
+                                <h5 class="views-head mt-3">Total Views</h5>
+                                <span class="views mb-1">308.402</span>
+
+                                <p>Start from 1 Jan 2021</p>
+                            </div>
+                        </div>
+                        <!-- card 1 end -->
+
+                        <!-- wrapper card 2  -->
+                        <div class="card-wrapper">
+                            <div class="card card2 c-pointer">
+                                <div class="bag-icon-wrapper">
+                                    <span class="fa-solid fa-shopping-bag">
+
+                                    </span>
+                                </div>
+                                <h5 class="views-head mt-3">Total Products</h5>
+                                <span class="views mb-1">10.820</span>
+
+                                <p><a href="#">+ Add New Product</a></p>
+                            </div>
+                        </div>
+                        <!-- wrapper card 3  -->
+                        <div class="card-wrapper">
+                            <div class="card crad3 c-pointer">
+                                <div class="user-icon-wrapper">
+                                    <span class="fa-solid fa-users"></span>
+                                </div>
+                                <h5 class="views-head mt-3">Total Users</h5>
+                                <span class="views mb-1">8.425</span>
+
+                                <p>New user noted every week</p>
+                            </div>
+                        </div>
+                        <!-- wrapper card 4  -->
+                        <div class="card-wrapper">
+                            <div class="card card4 c-pointer">
+                                <div class="cart-icon-wrapper">
+                                    <span class="fa-solid fa-cart-arrow-down"></span>
+                                </div>
+                                <h5 class="views-head mt-3">Total Sells</h5>
+                                <span class="views mb-1">1.028.623</span>
+
+                                <p>Start from 1 Jan 2021</p>
+                            </div>
+                        </div>
+                        <!-- card end -->
+                    </div>
+                </main>
+                <!-- main content end  -->
+
+                <!-- Data Section Start  -->
+                <div class="Data-wrapper">
+                    <div class="product-data"></div>
+                    <div class="data-graph"></div>
+
+
+                </div>
+                <!-- data section end  -->
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
