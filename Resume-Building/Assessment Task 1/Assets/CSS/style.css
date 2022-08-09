@@ -1,0 +1,123 @@
+/* ================================================ CSS Reset ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+
+body {
+    background-color: black;
+}
+/* css variables */
+:root{
+    --color:#e84653;
+    --color2:#c77389;
+}
+
+
+/* ================================================ Main CSS ========================================================= */
+main {
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5rem;
+    border-left: 10px solid var(--color);
+}
+
+/* ============================================= reusable css ======================================================*/
+.align-right{
+    text-align: right;
+}
+
+.align-left{
+text-align: left;
+}
+.width{
+    width: 500px;
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--color2);
+    font-weight: normal;
+}
+
+p{
+    font-size: 13px;
+    font-weight: normal;
+
+}
+.align-right h2{
+    color: var(--color2);
+    font-weight: 600;
+    font-size: 14px;
+}
+.align-left h3{
+    font-weight: 600;
+    font-size: 13px;
+}
+.red-span{
+    color: var(--color2);
+}
+span{
+    font-weight: normal;
+}
+.flex{
+    display: flex;
+
+}
+/* ================================================ Content ========================================================= */
+
+
+table{
+    width: 100%;
+}
+.align-right div{
+    margin-right: 70px;
+}
+.head-text,.head-text-para span{
+    color: var(--color);
+}
+.head-text-para{
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+div.margin-top{
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.margin-top.right{
+    margin-top: 45px;
+}
+
+/* Education Section  */
+
+ i{
+    font-size: 10px;
+}
+
+/* skills section  */
+ul{
+    width: 200px;
+    list-style: none;
+    font-size: 13px;
+}
+.ul1{
+    width: 300px;
+}
+
+/* Honors Section  */
+
+
+
+/* ==========================================================Responsive Code Here======================================================================  */
+
+@media (max-width:1880px) {
+    
+    
+}
