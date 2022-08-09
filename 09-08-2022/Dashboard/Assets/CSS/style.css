@@ -1,0 +1,705 @@
+/* importing font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=================== universal selector =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*===================== Global Selectors =====================*/
+:root {
+    --primary-color: #438ffe;
+    --icon-color: #bfc4cf;
+    --secondary-color: #f5f7f9;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    border: var(--icon-color);
+    transition: all 0.2s linear;
+}
+
+.icon:hover {
+    color: var(--primary-color);
+}
+
+.icon:active {
+    color: var(--icon-color);
+}
+
+
+/* ================== Helper Classes ================== */
+
+/* flex properties */
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+.align-left{
+    text-align: left;
+}
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+/* Pre define css  */
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.unset {
+    all: unset;
+}
+
+.icon {
+    color: var(--icon-color);
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 12px;
+    color: white;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    transition: all 0.2s linear;
+}
+
+.btn-primary:hover {
+    background-color: var(--icon-color);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-color);
+}
+
+::placeholder {
+    color: var(--icon-color);
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.text-active {
+    color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/*==================== Margin Helper  ====================*/
+/* margin top  */
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.mt-4 {
+    margin-top: 20px;
+}
+
+.mt-5 {
+    margin-top: 25px;
+}
+
+/* margin bottom */
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mb-2 {
+    margin-bottom: 10px;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+.mb-5 {
+    margin-bottom: 25px;
+}
+
+/* margin left */
+.ml-1 {
+    margin-left: 5px;
+}
+
+.ml-2 {
+    margin-left: 10px;
+}
+
+.ml-3 {
+    margin-left: 15px;
+}
+
+.ml-4 {
+    margin-left: 20px;
+}
+
+.ml-5 {
+    margin-left: 25px;
+}
+
+/* margin right */
+.mr-1 {
+    margin-right: 5px;
+}
+
+.mr-2 {
+    margin-right: 10px;
+}
+
+.mr-3 {
+    margin-right: 15px;
+}
+
+.mr-4 {
+    margin-right: 20px;
+}
+
+.mr-5 {
+    margin-right: 25px;
+}
+
+
+
+/*================ Header Start ===================== */
+
+/* header left side content css  */
+#header {
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 5px;
+}
+
+.fa-clone {
+    color: var(--primary-color);
+    font-size: 30px;
+    transition: all 0.2s linear;
+}
+
+.fa-clone:hover {
+    color: var(--icon-color);
+}
+
+.fa-clone:active {
+    color: var(--primary-color);
+}
+
+.search-box {
+    margin-left: 3rem;
+    background-color: var(--secondary-color);
+}
+
+.fa-magnifying-glass {
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+#search-icon {
+    width: 220px;
+    margin-left: 5px;
+}
+
+/* header right side content css  */
+.profile img {
+    height: auto;
+    max-width: 100%;
+}
+
+.profile {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 3px;
+
+    transition: all 0.2s linear;
+
+}
+
+.profile:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    box-shadow: 0px 0.5px 4px 2px var(--icon-color);
+
+}
+
+.profile:active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.notification {
+    margin-right: 20px;
+    font-size: 22px;
+    position: relative;
+    padding: 3px;
+}
+
+.notification::after {
+    content: "";
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 5px;
+    right: 1px;
+
+}
+
+#dropdown:active {
+    color: var(--primary-color);
+}
+
+
+
+/*========================= sidebar section start ===================== */
+#sidebar {
+    /* position: static; */
+    background-color: white;
+    width: 220px;
+    transform: translateX(-1);
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+}
+
+.sidebar-wrapper {
+    position: relative;
+}
+
+.active {
+    background-color: var(--icon-color);
+}
+
+.active .icon {
+    color: var(--primary-color);
+}
+
+.active .menu-text {
+    color: white;
+}
+
+.menu-text {
+    /* border: 1px solid red; */
+    justify-content: center;
+    font-size: 15px;
+    margin-left: 10px;
+    color: black;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+
+}
+
+/* ul li .active{
+    background-color: ;
+} */
+
+ul {
+    width: 100%;
+    transition: all 0.2s linear;
+}
+
+ul li {
+    width: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#sidebar ul li:hover {
+    background-color: var(--icon-color);
+    color: white;
+}
+
+#sidebar ul li:hover .menu-text {
+    color: white;
+    /* color: #29225b; */
+    /* font-weight: bold; */
+}
+
+#sidebar ul li:hover .icon {
+    color: var(--primary-color);
+    /* color: white; */
+}
+
+.ul-div>a {
+    width: 50%;
+}
+
+ul li .icon {
+    width: 60px;
+    text-align: center;
+    transition: all 0.2s linear;
+    /* height: 30px; */
+}
+
+.ul-div li {
+    padding: 10px;
+}
+
+li span {
+    width: 30px;
+}
+
+/* list styling  */
+ul a {
+    text-align: left;
+}
+
+.ul1 li,
+.ul2 li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+li .icon {
+    font-size: 20px;
+}
+
+#toggleSidebar {
+    display: none;
+}
+
+#toggleSidebar:checked+#sidebar {
+    transform: translateX(-500px);
+    width: 0;
+}
+
+#toggleSidebar:checked+aside ul {
+    transform: translateX(-500px);
+}
+
+/*====================== main content Start  =======================*/
+#main {
+    padding: 30px;
+    padding-left: 46px;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #29225b;
+}
+
+.card {
+    height: 260px;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+    transition: all 0.2s linear;
+}
+
+.card:hover {
+    /* transform: scale(1.05); */
+    /* -webkit-transform: scale(1.05); */
+    transform: translateY(-10px);
+    color: white;
+}
+
+.card::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    width: 80%;
+    position: absolute;
+    top: 77%;
+    left: 30px;
+    right: 25px;
+    background-color: var(--icon-color);
+}
+
+.row {
+    flex-wrap: wrap;
+    /* background-color: aqua; */
+    /* padding-left: -16px;
+    padding-right: -16px; */
+    width: 100%;
+}
+
+.card-wrapper {
+    width: 25%;
+    margin-bottom: 20px;
+    /* background-color: blueviolet; */
+    padding-right: 16px;
+
+
+}
+
+.card p {
+    position: absolute;
+    bottom: 25px;
+}
+
+/* card 1  */
+
+.card1 {
+    background-color: var(--primary-color);
+    color: white;
+
+}
+
+.eye-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.123);
+    height: 40px;
+    width: 40px;
+
+}
+
+.fa-eye {
+    color: white;
+}
+
+.card1 h5.views-head {
+    font-weight: 100;
+    font-size: 18px;
+    color: #dbeaff;
+}
+
+.card1 .views {
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+}
+
+.card1 p {
+    font-weight: 100;
+    font-size: 12px;
+    color: #dbeaff;
+}
+
+/* card 2  */
+.bag-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    color: rgb(79, 150, 79);
+    background-color: rgba(0, 128, 0, 0.082);
+}
+
+h5.views-head {
+    font-weight: 100;
+    font-size: 18px;
+    color: #b6bbc8;
+}
+
+.views {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #160e4d;
+}
+
+.card p {
+    font-weight: 100;
+    font-size: 12px;
+    color: #b6bbc8;
+}
+
+.card2 a {
+    font-weight: 100;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+/* card 3 css  */
+.user-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(71, 129, 253, 0.075);
+    color: var(--primary-color);
+}
+
+/* card 4 */
+.cart-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    color: rgb(79, 150, 79);
+    background-color: rgba(0, 128, 0, 0.082);
+}
+
+
+/* try */
+.main-wrapper {
+    position: relative;
+}
+
+.main-overlay {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-color: #160e4d;
+    z-index: 12;
+}
+
+
+/* Product Data CSS  */
+
+.Data-wrapper {
+    /* background-color:var(--icon-color); */
+    padding-right: 16px;
+}
+
+.product-data {
+    padding: 15px;
+    background-color: white;
+}
+#product{
+    /* border-collapse: collapse; */
+    border-spacing: 0 15px;
+    
+}
+th, td{
+    padding: 15px;
+    margin-bottom: 10px;
+    border-spacing: 10px 10px;
+}
+.table-row{
+    background-color: #f5f7f9;
+    margin-bottom: 20px;
+}
+.no{
+    width: 150px;
+}
+.product-img-wrapper{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+}
+.product-img-wrapper img{
+    height: auto;
+    max-width: 100%;
+}
+/* ================================= */
+/* graph CSS */
+/* ================================== */
+.graph-wrapper{
+   width: 100%;
+   height: 500px;
+background-color: white;
+border-left: 10px solid #f5f7f9;
+}
+.graph-wrapper img{
+    height: auto;
+    max-width:100%;
+
+}
+
+
+
+
+/* responsive code for css  */
+
+/* for medium devices  */
+@media(max-width:1200px) {
+    .card-wrapper {
+        width: 33.33%;
+    }
+}
+
+@media(max-width:992px) {
+    .card-wrapper {
+        width: 50%;
+    }
+
+    /* .Data-wrapper {
+        display: none;
+    } */
+}
+
+@media(max-width:768px) {
+    aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    .notification {
+        display: none;
+    }
+
+    .main-overlay {
+        background-color: rgba(128, 128, 128, 0.123);
+        z-index: 9;
+    }
+}
+
+@media(max-width:600px) {
+    .card-wrapper {
+        width: 100%;
+    }
+}
