@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Console</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+</head> 
+    <body onload="updateTime()">
+    <div id="main-wrapper" class="d-flex align-center justify-center">
+        <div class="main-time-picker d-flex align-center justify-center p-relative direction-column">
+            <div class="input-area d-flex align-center justify-center direction-column p-absolute"><h1>Time
+                    Standard</h1>
+                <div class="">
+                    <form action="" class="form">
+                        <select id="Time" onchange="change()">
+                            <option value="Select-Time" selected disabled>Select Time Zone</option>
+                            <option value="IN">Indian Standard</option>
+                            <option value="USA">USA</option>
+                            <option value="AUS">Australia Standard Time</option>
+                            <!-- <input type="button" value="submit"> -->
+                        </select>
+                    </form>
+                </div>
+            </div>                   
+            <div class="d-flex direction-column align-center justify-center">
+                <h2 id="Output"></h2>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script>
+
+            
+
+        </script>
+</body>
+
+</html>
