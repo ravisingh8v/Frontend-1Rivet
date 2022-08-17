@@ -41,7 +41,7 @@ const users = [{
     "Email":"ramesh463@gmail.com",
 },
 {
-    "Id":8,
+    "Id":7,
     "Name":"Ramesh",
     "Suranme":"Varma",
     "Designation":"Software Dev",
@@ -49,7 +49,7 @@ const users = [{
     "pass":"ramesh463@gmail.com",
 },
 ];
-
+// const users=[];
 
 getData(users);
     // adding data in table 
@@ -74,34 +74,49 @@ function getData(data){
     tbody.appendChild(tableRow);
 });
 }
+
+
+
 //   filter 
 
+    function onKey() {
+        const userTableBody = document.querySelector('#tbody'); /** get user tbody */
+        const searchTerm = document.querySelector('#myInput');
+        const noRecordDiv = document.querySelector('.not-found');
+        const userTable = document.querySelector('#myTable');
+        userTableBody.textContent = '';
 
-function onKey() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("input");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-               
-            } else {
-                tr[i].style.display = "none";
-                
-            };
-            
+        let filteredData = [];
+      
+        if (searchTerm.value !== '') {
+          filteredData = users.filter((item) => {
+            return item.Name.toLowerCase().includes(searchTerm.value.toLowerCase());
+          });
+        } else {
+          filteredData = users;
         }
-    }
-}
+      
+        // filteredData = searchTerm.value !== '' ? userList.filter(item => item.name.toLowerCase().includes(searchTerm.value.toLowerCase())) : userList;
+        
+        if (!filteredData.length) {
+          userTable.classList.add('d-none');
+          noRecordDiv.classList.remove('d-none');
+        } else {
+          userTable.classList.remove('d-none');
+          noRecordDiv.classList.add('d-none');
+        }
+        getData(filteredData);
+      }
 
-// pop - up 
+    // pop - up 
 
 function myfuntion(){
-     var popUp = document.getElementById('pop-up');
-     popUp.classList.toggle("d-none")
+    var popUp = document.getElementById('pop-up');
+    popUp.classList.toggle("d-none")
 }
+
+
+
+
+
+
