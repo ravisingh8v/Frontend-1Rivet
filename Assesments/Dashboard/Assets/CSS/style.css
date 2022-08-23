@@ -17,6 +17,20 @@
     --hover-color:#0fb229;
     --hover-helper:#f2fcf4;
     --icon-bg:#f2f2f2;
+
+/* types css  */
+--discard-bg:#ffeeeb;
+--discard-text:#e55f5f;
+
+--want-bg:#f1fef4;
+--want-text:#2e9241;
+
+--waiting-bg:#fff7e3;
+--waiting-text:#dd983b;
+
+--cancel-bg:#f6f6f6;
+--cancel-text:#060913;
+
 }
 
 /* global Selectors */
@@ -207,12 +221,14 @@ color: black;
     display: none;
 }
 #toggleSidebar:checked + #sidebar{
+    min-width: 0;
     width: 0;
     transform: translatex(-300px);
 }
 aside{
     background-color: #fff;
-    width: 350px;
+    min-width: 290px;
+    width: 290px;
     transition: all 0.2s linear;
 }
 .general-section{
@@ -240,6 +256,7 @@ li{
 .ul-div{
     padding: 15px 0;
     padding-left: 50px;
+    position: relative;
 }
 .ul-div .icon{
     width: 40px;
@@ -250,6 +267,26 @@ li{
 /* li hover effect  */
 .ul-div:hover{
     background-color: var(--hover-helper);
+}
+.ul-div:hover::before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #0fb229;
+
+}
+.ul-div.active::before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #0fb229;
+
 }
 .ul-div:hover  #menu-icon{
     color: var(--hover-color);
@@ -294,19 +331,20 @@ padding: 27px;
 }
 
 /* card  */
-.cards{
+/* .cards{
     flex-wrap: wrap;
-}
-.card{
-    margin-right: 10px;
-    margin-top: 20px;
+} */
+/* .card{ */
+    /* margin-right: 10px; */
+    /* margin-top: 20px;
     background-color: white;
     padding: 10px;
     cursor: pointer;
     width: 16.66%;
     
-}
-.icon-wrapper{
+} */
+
+/* .icon-wrapper{
     background-color: var(--icon-bg);
     border-radius: 50%;
     height: 50px;
@@ -318,7 +356,7 @@ padding: 27px;
 }
 p{
     color: var(--icon-color);
-}
+} */
 
 /* activity section table  */
 
@@ -338,7 +376,18 @@ p{
 color: var(--hover-color);
 }
 
+.table-wrapper{
+    height: 620px;
+    /* background-color: #0fb229; */
+    overflow-y: scroll;
+    width: 100%;
+    /* max-width: 500px; */
+    /* overflow-x: scroll; */
+    /* position: relative; */
+}
+
 table {
+    overflow-x: auto;
     /* border-spacing: 10px 10; */
     width: 100%;
     /* border: 2px solid black; */
@@ -347,6 +396,8 @@ table {
     /* border-collapse: collapse; */
 }
 th{
+    position: sticky;
+    top: 0;
     color: var(--icon-color);
     font-weight: normal;
 }
@@ -354,6 +405,7 @@ th,td{
     background-color: white;
     padding: 20px;
     text-align: left;
+    /* white-space: nowrap; */
 }
 .bg-red{
     background-color: red;
@@ -362,14 +414,34 @@ th,td{
 table td[value="Discarded"]{
 background-color: red;
 }
+.bedge{
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+.discard{
+    background-color: var(--discard-bg);
+    color: var(--discard-text);
+
+}
+.want{
+    background-color: var(--want-bg);
+    color: var(--want-text);
+}
+.wait{
+background-color: var(--waiting-bg);
+color: var(--waiting-text);
+}
+.cancel{
+    background-color: var(--cancel-bg);
+    color: var(--cancel-text);
+}
+
 
 
 
 
 /* media query */
 
-@media (max-width:1200px){
-.card{
-    width: 25%;
-}
+@media (max-width:1100px){
+
 }
