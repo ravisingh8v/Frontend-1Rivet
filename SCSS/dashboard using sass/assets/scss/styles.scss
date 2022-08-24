@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url(_header.scss);
+@import url(_root.scss);
+
+
+
+// color 
+$primary-color:red;
+
+// font
+$font-family: 'Roboto', sans-serif;
+
+// css variable
+:root{
+    --font:$font-family;
+    --p-color:$primary-color;
+}
+p{
+    background-color: var(--p-color);
+}
+
+
+// @debug $primary-color;
+
