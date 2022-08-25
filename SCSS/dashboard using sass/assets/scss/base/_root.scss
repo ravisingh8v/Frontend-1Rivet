@@ -1,0 +1,32 @@
+// SASS Variables
+$icon-color: #82838b;
+$p-bg: #fafafa;
+$hover-color:#0fb229;
+$icon-bg:#f2f2f2;
+$hover-helper:#f2fcf4;
+// font
+$font-family: 'Roboto', sans-serif;
+
+
+/* CSS variable */
+:root {
+    --icon-color:#{$icon-color};
+    --p-bg: #{$p-bg};
+    --hover-color: #{$hover-color};
+    --icon-bg: #{$icon-bg};
+    --hover-helper: #{$hover-helper};
+
+    /* types css  */
+    --discard-bg: #ffeeeb;
+    --discard-text: #e55f5f;
+
+    --want-bg: #f1fef4;
+    --want-text: #2e9241;
+
+    --waiting-bg: #fff7e3;
+    --waiting-text: #dd983b;
+
+    --cancel-bg: #f6f6f6;
+    --cancel-text: #060913;
+
+}

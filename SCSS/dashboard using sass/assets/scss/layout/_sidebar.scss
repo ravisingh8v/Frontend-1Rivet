@@ -1,0 +1,101 @@
+/* ==================== sidebar css ============================ */
+#toggleSidebar{
+    display: none;
+}
+#toggleSidebar:checked + #sidebar{
+    min-width: 0;
+    width: 0;
+    transform: translatex(-300px);
+}
+// aside{
+//     background-color: #fff;
+//     min-width: 290px;
+//     width: 290px;
+//     transition: all 0.2s linear;
+//     z-index: 10;
+
+
+//     // media 
+//     @media (max-width:1100px){
+//         aside{
+//             position: absolute;
+//             z-index: 20;
+//         }
+        
+//         }
+// }
+.general-section{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.other-section{
+    margin-top: 50px;
+}
+.general-section h4, .other-section h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    /* padding-left: 50px; */
+    padding: 10px 0 10px 50px;
+}
+li{
+    display: flex;
+    /* justify-content: c; */
+    align-items: center;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+.ul-div{
+    padding: 15px 0;
+    padding-left: 50px;
+    position: relative;
+}
+.ul-div .icon{
+    width: 40px;
+    font-size: 20px;
+    /* text-align: center; */
+}
+
+/* li hover effect  */
+.ul-div:hover{
+    background-color: var(--hover-helper);
+}
+.ul-div:hover::before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #0fb229;
+
+}
+.ul-div.active::before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #0fb229;
+
+}
+.ul-div:hover  #menu-icon{
+    color: var(--hover-color);
+}
+.ul-div:hover  .icon{
+    color: var(--hover-color);
+}
+/* end ./\ */
+
+/* list is active */
+.ul-div.active{
+    background-color: var(--hover-helper);
+}
+.ul-div.active #menu-icon{
+    color: var(--hover-color);
+}
+.ul-div.active  .icon{
+    color: var(--hover-color);
+}

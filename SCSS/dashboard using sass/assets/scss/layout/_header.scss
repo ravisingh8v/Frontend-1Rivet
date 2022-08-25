@@ -1,0 +1,53 @@
+/*======================= navbar css ========================= */
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #f0eff1;
+    z-index: 10;
+    .navbar{
+        padding: 25px;
+    }
+}
+
+.main-heading{
+    margin-left: 50px;
+}
+.brand, h1{
+    padding: 0 30px;
+}
+.brand-name{
+    font-weight: 500;
+    font-size: 27px;
+    color: #080808;
+}
+.fa-bars{
+font-size: 20px;
+color: black;
+}
+
+.profile-img{
+    height: auto;
+    max-width: 100%;
+    &-wrap{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+}
+
+
+
+.profile-name{
+    font-weight: 500;
+    font-size: 16px;
+}
+.profile-img-wrap, .dropdown{
+    margin-right: 15px ;
+}
+
+.head-icon{
+    margin-right: 30px;
+}
+
+

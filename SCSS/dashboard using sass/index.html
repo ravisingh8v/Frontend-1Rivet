@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Assential</title>
+    <!-- Importing Font  -->
+
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- fontawesome importing icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google icon  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper d-flex flex-column h-100">
+        <!-- ===========================================HEADER START==========================================  -->
+        <header id="header">
+            <nav class="navbar d-flex align-center justify-between">
+                <!-- left side content header  -->
+                <div class="left-head d-flex align-center">
+                    <label for="toggleSidebar" class="fas fa-thin fa-bars icon"></label>
+                    <div class="brand"><span class="brand-name">TallyScan</span></div>
+                    <h1 class="main-heading">Dashboard</h1>
+                </div>
+
+                <!-- right content header  -->
+                <div class="right-head d-flex align-center">
+                    <span class="head-icon fas fa-light fa-bell icon"></span>
+                    <div class="profile-img-wrap">
+                        <img class="profile-img" src="assets/Images/profile.jpg" alt="">
+                    </div>
+                    <div class="dropdown">
+                        <span class="profile-name">John Smith</span>
+                        <span class="fas fa-light fa-angle-down icon"></span>
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+        <!-- ===============================================header END ========================================== -->
+
+        <!-- ============================================ SECTION START ========================================   -->
+        <!-- SIDE  BAR SECTION START  -->
+        <section class="d-flex h-100">
+            <input type="checkbox" name="" id="toggleSidebar">
+            <aside class="h-100 d-flex flex-column flex-grow" id="sidebar">
+
+                <div class="sidebar-wrapper h-100 flex-grow">
+                    <div class="general-section">
+                        <h4>General</h4>
+                        <ul class="list wrapper">
+                            <div class="ul-div active">
+                                <li class="">
+                                    <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                            class="fas fa-search fa-thin icon"></label><span
+                                            class="menu-text">Search</span>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="ul-div ">
+                                <li class="">
+                                    <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                            class="fas fa-thin fa-bell icon "></label><span
+                                            class="menu-text">Alert</span>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="ul-div ">
+                                <li class="">
+                                    <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                            class="fas fa-regular fa-tag icon "></label><span
+                                            class="menu-text">Tags</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="other-section">
+                        <h4>Others</h4>
+                        <ul class="list wrapper">
+                            <div class="ul-div ">
+                                <li class="">
+                                    <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                            class="fas fa-regular fa-gear icon "></label><span
+                                            class="menu-text">Settings</span> </a>
+                                </li>
+                            </div>
+                            <div class="ul-div ">
+                                <li class="">
+                                    <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                            class="fas fa-light fa-sun icon "></label><span
+                                            class="menu-text">Tips</span>
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="ul-div ">
+                                <li class="">
+                                    <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                            class="fas fa-light fa-trash-can icon "></label><span
+                                            class="menu-text">Trash</span> </a>
+                                </li>
+                            </div>
+                            <div class="ul-div ">
+                                <li class="">
+                                    <a href="https://www.google.com" id="menu-icon"> <label for="menu-icon"
+                                            class="fas fa-light fa-arrow-right-to-bracket icon "></label><span
+                                            class="menu-text">Logout</span> </a>
+                                </li>
+                            </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- SIDE BAR END  -->
+
+            <!-- MAIN SECTION START  -->
+            <div id="overlay">
+            </div>
+            <main id="main" class=" d-flex flex-column h-100 w-100">
+                <div class="searchbox-wrapper d-flex justify-between">
+                    <div></div>
+                    <div class="searchbox">
+                        <input class="unset" type="text" id="myInput" onkeyup="filterData()">
+                        <button class="unset btn btn-primarys" type="button" onclick="filterData()">Search</button>
+                    </div>
+                </div>
+
+                <!-- <div class="cards d-flex w-100">
+                    <div class="card card1 flex-grow d-flex justify-between align-center ">
+                        <div>
+                            <p>Scans</p>
+                            <span class="num">350</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <span class="icon fas fa-thin fa-barcode"></span>
+                        </div>
+                    </div> -->
+                <!-- card 2 -->
+                <!-- <div class="card card2 flex-grow d-flex align-center justify-between">
+                        <div>
+                            <p>List</p>
+                            <span class="num">350</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <span class="icon fas fa-thin fa-barcode"></span>
+                        </div>
+                    </div> -->
+                <!-- card 3 -->
+                <!-- <div class="card card3 flex-grow d-flex justify-between align-center">
+                        <div>
+                            <p>Cost</p>
+                            <span class="num">$345</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <span class="icon fas fa-thin fa-barcode"></span>
+                        </div>
+                    </div> -->
+                <!-- card4  -->
+                <!-- <div class="card card4 flex-grow d-flex justify-between align-center">
+                        <div>
+                            <p>Buy Now</p>
+                            <span class="num">350</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <span class="icon fas fa-thin fa-barcode"></span>
+                        </div>
+                    </div>
+                    <div class="card card5 flex-grow d-flex justify-between align-center">
+                        <div>
+                            <p>Buy Cheaper</p>
+                            <span class="num">350</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <span class="icon fas fa-thin fa-barcode"></span>
+                        </div>
+                    </div>
+                    <div class="card card6 flex-grow d-flex justify-between align-center">
+                        <div>
+                            <p>Buy Healthier</p>
+                            <span class="num">350</span>
+                        </div>
+                        <div class="icon-wrapper">
+                            <span class="icon fas fa-thin fa-barcode"></span>
+                        </div>
+                    </div>
+
+                </div> -->
+                <div class="activity-section">
+                    <h3>Recent Activity</h3>
+                    <div class="table-wrapper">
+                        <!-- table start from here  -->
+                        <table id="myTable" class="w-100">
+                            <!-- thead  -->
+                            <thead id="thead" class="">
+                                <tr id="header">
+                                    <th>Items</th>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Est.Cost</th>
+                                    <th>Last</th>
+                                    <th>List</th>
+                                    <th>Auto</th>
+                                    <th>Buy Now</th>
+                                </tr>
+                            </thead>
+                            <!-- head end  -->
+
+                            <!-- tbody -->
+                            <tbody id="tbody">
+
+                            </tbody>
+
+                            <!-- body end  -->
+                        </table>
+                        <table>
+
+                        </table>
+
+                        <div class="not-found d-none">Not Found</div>
+
+                        <!-- table end  -->
+
+                    </div>
+                </div>
+
+
+            </main>
+        </section>
+        <!-- MAIN END -->
+    </div>
+
+    <!-- JavaScript  -->
+    <!-- boxicon import  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"
+        integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- linking js file  -->
+    <script src="assets/JS/script.js"></script>
+
+</body>
+
+</html>

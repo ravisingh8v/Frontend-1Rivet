@@ -1,24 +1,47 @@
+// importing font style 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-@import url(_header.scss);
-@import url(_root.scss);
+
+// importing base files
+@import "base/base";
+
+// Importing Layout
+@import "layout/layout";
 
 
+/* media query */
 
-// color 
-$primary-color:red;
 
-// font
-$font-family: 'Roboto', sans-serif;
+aside {
+    background-color: #fff;
+    min-width: 290px;
+    width: 290px;
+    transition: all 0.2s linear;
+    z-index: 10;
 
-// css variable
-:root{
-    --font:$font-family;
-    --p-color:$primary-color;
+
+    // media 
+    @media (max-width:1100px) {
+
+        position: absolute;
+        z-index: 20;
+
+
+    }
 }
-p{
-    background-color: var(--p-color);
+
+table {
+    /* overflow-x: scroll; */
+    /* border-spacing: 10px 10; */
+    width: 100%;
+    /* border: 2px solid black; */
+    /* margin-top: 20px; */
+    border-spacing: 0px 4px;
+    /* border-collapse: collapse; */
+
+    // media 
+    @media (max-width:1200px) {
+        font-size: 14px;
+
+    }
+
 }
-
-
-// @debug $primary-color;
-

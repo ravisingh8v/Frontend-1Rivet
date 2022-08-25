@@ -1,0 +1,150 @@
+/*================================ main section start  ====================================*/
+
+#main{
+    padding: 27px;
+    }
+    
+    
+    .searchbox{
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--hover-color);
+        border: 1px solid var(--hover-color);
+        border-radius: 5px;
+    
+    }
+    #myInput{
+        /* border: 1px solid var(--hover-color); */
+        border-radius: 5px;
+        padding: 10px;
+        background-color: var(--p-bg);
+    }
+    
+    /* card  */
+    /* .cards{
+        flex-wrap: wrap;
+    } */
+    /* .card{ */
+        /* margin-right: 10px; */
+        /* margin-top: 20px;
+        background-color: white;
+        padding: 10px;
+        cursor: pointer;
+        width: 16.66%;
+        
+    } */
+    
+    /* .icon-wrapper{
+        background-color: var(--icon-bg);
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    p{
+        color: var(--icon-color);
+    } */
+    
+    /* activity section table  */
+    
+    
+    .activity-section{
+        margin: 10px 0;
+        /* overflow: scroll; */
+    }
+    .activity-section h3{
+        font-size: 23px;
+        font-weight: 500;
+        margin: 20px 0;
+    }
+    
+    /* table  */
+    .not-found{
+        text-align: center;
+    color: var(--hover-color);
+    }
+    
+    .table-wrapper{
+        height: 700px;
+        /* background-color: #0fb229; */
+        overflow-y: scroll;
+        width: 100%;
+        /* max-width: 500px; */
+        overflow-x: scroll;
+        /* position: relative; */
+    }
+    
+    // table {
+    //     /* overflow-x: scroll; */
+    //     /* border-spacing: 10px 10; */
+    //     width: 100%;
+    //     /* border: 2px solid black; */
+    //     /* margin-top: 20px; */
+    //     border-spacing: 0px 4px;
+    //     /* border-collapse: collapse; */
+
+    //     // media 
+    //     @media (max-width:1200px){
+    //         table{
+    //             font-size: 14px;
+    //         }
+            
+    //         }
+
+    // }
+
+    th{
+        position: sticky;
+        top: 0;
+        color: var(--icon-color);
+        font-weight: normal;
+    }
+    th,td{
+        background-color: white;
+        padding: 20px;
+        text-align: left;
+        /* white-space: nowrap; */
+    }
+    .bg-red{
+        background-color: red;
+    }
+    
+    table td[value="Discarded"]{
+    background-color: red;
+    }
+    .bedge{
+        padding: 5px 12px;
+        border-radius: 20px;
+    }
+    .discard{
+        background-color: var(--discard-bg);
+        color: var(--discard-text);
+    
+    }
+    .want{
+        background-color: var(--want-bg);
+        color: var(--want-text);
+    }
+    .wait{
+    background-color: var(--waiting-bg);
+    color: var(--waiting-text);
+    }
+    .cancel{
+        background-color: var(--cancel-bg);
+        color: var(--cancel-text);
+    }
+    
+    /* #overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(107, 107, 107, 0.445);
+        display: none;
+    } */
+    
