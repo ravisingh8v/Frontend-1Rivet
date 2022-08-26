@@ -1,0 +1,10 @@
+@mixin content-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn-variant($primary,$text-color){
+    background-color: $primary;
+    color: $text-color;
+}

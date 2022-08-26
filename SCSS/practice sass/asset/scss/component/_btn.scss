@@ -1,0 +1,9 @@
+@each $color, $value in $theme-color {
+    .btn-#{$color}{
+        background-color: #{$value};
+    }
+}
+.btn{
+    padding: 10px;
+    border: 1px solid $border;
+}

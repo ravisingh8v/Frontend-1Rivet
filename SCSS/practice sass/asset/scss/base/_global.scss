@@ -1,0 +1,44 @@
+// universal selector 
+
+*, *::after,*::before{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+html,body{
+width: 100%;height: 100%;
+}
+
+// for loop
+@for $var from 1 through 5  {
+    // margin 
+.m-#{$var}{
+    margin: #{$var}px;
+} 
+}
+// padding 
+@for $var from 1 to 6 {
+    .p-#{$var}{
+        padding: #{$var}px;
+    }
+}
+// each loop 
+@each $color, $value in $theme-color {
+    .bg-#{$color}{
+        background-color: #{$value};
+    }
+}
+
+// here we get margin like 5px 10px 15px 20px 
+@each $value in (5,10,15,20) {
+    .m2-#{$value}{
+        margin: #{$value}px;
+    }
+    
+}
+@each $value in (25,50,75,100) {
+    .w-#{$value}{
+        width: (#{$value});
+    }
+    
+}
