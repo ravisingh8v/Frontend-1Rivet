@@ -1,0 +1,14 @@
+.topbar {
+    height: $header-height;
+    flex-shrink: 0;
+    padding: 0 30px;
+    border-bottom: 1px solid $border-color;
+    .fa-magnifying-glass{
+        color: $magni-color;
+        // font-weight: 400;
+    }
+    .search{
+        all: unset;
+        color: $black;
+    }
+  }

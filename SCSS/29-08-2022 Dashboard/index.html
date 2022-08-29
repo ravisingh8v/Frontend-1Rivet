@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCSS Dashboard Demo</title>
+    <!-- <script src="https://kit.fontawesome.com/e1b18a8fad.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+    <section class="page-wrapper">
+
+        <input type="checkbox" id="sideBar" />
+        <aside class="sidebar">
+
+            <header class="logo">
+                <label for="sideBar"><span class="logo-icon fa-solid fa-c"></span></label>
+                <h3 class="logo-text mt-0 mb-0 ml-3">Courses</h3>
+            </header>
+
+            <nav class="nav-wrapper" aria-label="Navigation">
+                <div class="mb-4">
+                    <span class="nav-title">Menu</span>
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-book-bookmark"></span>
+                                <span class="nav-text">My Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-table-list"></span>
+                                <span class="nav-text">Browse Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-list-check"></span>
+                                <span class="nav-text">My Categories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-envelope"></span>
+                                <span class="nav-text">My Messages</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="nav-title">Groups</span>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon text-orange fa-regular fa-circle"></span>
+                                <span class="nav-text">UI/UX</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon text-purple fa-regular fa-circle"></span>
+                                <span class="nav-text">Industrial Design</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon text-pink fa-regular fa-circle"></span>
+                                <span class="nav-text">Architecture</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="nav-link link-add-more">
+                    <span class="nav-icon fa-solid fa-plus"></span>
+                    <span class="nav-text disable">Add group</span>
+                </a>
+            </nav>
+
+            <a href="#" class="nav-link link-theme">
+                <span class="nav-icon fa-solid fa-moon"></span>
+                <span class="nav-text">Dark Mode</span>
+            </a>
+        </aside>
+
+        <section class="main-content">
+            <header class="topbar flex-center">
+                <div class="search-wrapper flex-center">
+                    <label for="search">
+                        <span class="icon pr-2 fa-solid fa-magnifying-glass"></span>
+                    </label>
+                    <input type="text" name="search" class="search" id="search" placeholder="Search..." />
+                </div>
+                <div class="head-right">
+                    <span class="fa fa-regular fa-bell"></span>
+
+
+                </div>
+            </header>
+
+
+
+            </main>
+        </section>
+    </section>
+</body>
+
+</html>
