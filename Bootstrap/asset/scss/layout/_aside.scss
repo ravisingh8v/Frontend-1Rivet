@@ -1,0 +1,55 @@
+#sidebar {
+    width: $aside-width;
+
+    .brand {
+        font-size: 1.2rem;
+        color: white;
+
+        &-name {
+            font-weight: 700;
+        }
+    }
+
+
+    .nav {
+
+        .nav-link {
+            color: $nav-link-color;
+            font-weight: 500;
+            border-radius: $border-radius;
+
+            &.active {
+                background-color: rgba($nav-active-bg, 0.15);
+                color: $nav-active-color;
+            }
+
+            &:hover {
+                background-color: rgba($nav-active-bg, 0.15);
+            }
+
+
+
+        }
+
+        &-item {
+            border-radius: $border-radius;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+.nav-icon{
+    margin-right: 16px;
+}
+
+.img-wrapper{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+.img-wrapper img{
+    width: 100%;
+    height: auto;
+}
