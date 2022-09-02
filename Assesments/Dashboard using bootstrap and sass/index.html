@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google font  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- bootstrap icon  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
+  <!-- custom css  -->
+  <link rel="stylesheet" href="asset/css/style.css">
+  <title>Bootstrap Dashboard</title>
+</head>
+
+<body>
+  <!-- whole content wrapper  -->
+  <div class="wrapper d-flex border h-100">
+
+    <!-- sidebar wrapper -->
+    <aside class="sidebar shadow ">
+      <div class="brand-wrapper shadow text-center px-2 py-3">
+        <!-- <img class="brand-img" src="asset/images/Bootstrap Assessment.png" alt="brand-logo"> -->
+        <span class="fa fa-regular fa-heart text-primary pe-1"></span>
+        <span class="brand-name">FITTLE</span>
+      </div>
+      <!-- navigation  -->
+      <ul class="d-flex flex-column align-items-center nav flex-column">
+        <li class="nav-item ">
+          <a class="nav-link active px-0 py-3 d-flex flex-column text-center" href="#"><span
+              class="nav-icon fa fa-dashboard"></span><span class="nav-text">Dashboard</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-0 py-3 d-flex flex-column text-center" href="#"><span
+              class="nav-icon fa fa-thumbs-up"></span><span class="nav-text">My Subscription</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-0 py-3 d-flex flex-column text-center" href="#"><span
+              class="nav-icon fa fa-building"></span><span class="nav-text">My Studio</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-0 py-3 d-flex flex-column text-center" href="#"><span
+              class="nav-icon fa fa-suitcase"></span><span class="nav-text">Post A Job</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-0 py-3 d-flex flex-column text-center" href="#"><span
+              class="nav-icon fa fa-calendar"></span><span class="nav-text">My Events</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-0 py-3 d-flex flex-column text-center" href="#"><span
+              class="nav-icon fa fa-bell"></span><span class="nav-text">Notifications</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-0 py-3 d-flex flex-column text-center" href="#"><span
+              class="nav-icon fa fa-gear"></span><span class="nav-text">Settings</span></a>
+        </li>
+      </ul>
+    </aside>
+    <!-- sidebar end  -->
+
+    <!-- section start  -->
+    <section class="section d-flex flex-column flex-grow-1">
+
+      <!-- header section  -->
+      <header class="header d-flex px-4 py-3 shadow justify-content-between">
+        <!-- left side input feild  -->
+        <div class="header-left flex-grow-1 d-flex align-items-center">
+          <label for="search" class="header-icon fa fa-solid fa-search pe-1"></label>
+          <input type="text" class="unset header-search-box w-100" placeholder="Search" id="search">
+        </div>
+        <!-- end -->
+        <!-- right side  -->
+        <div class="header-right d-flex align-items-center">
+          <span class="header-icon fa fa-solid fa-bell me-2 position-relative"><span
+              class="position-absolute noti-bedge bg-danger rounded-circle"></span></span>
+          <span class="header-text me-2">Ryan Gosling</span>
+          <div class="image-wrapper">
+            <img src="asset/images/profile.jpg" alt="profile-pic">
+          </div>
+        </div>
+        <!-- end -->
+      </header>
+      <!-- header end  -->
+
+      <!-- main section  -->
+      <main class="main flex-grow-1 px-4 py-3">
+        <h1>Dashboard</h1>
+        <p class="welcome-para">Hello, Ryan! Check out what's is happening today!</p>
+        <!-- pop card model  -->
+        <div class="pop-1 d-flex align-items-center my-1 py-2 justify-content-between">
+          <div class="d-flex align-items-center ">
+            <span class="pop-icon fa fa-exclamation-circle mx-1"></span>
+            <span class="pop-text mx-1">Thanks for joining YPC! GO ahead and</span>
+            <button class="btn btn-primary text-white rounded-pill mx-1">Create Now</button>
+          </div>
+          <!-- for right cross  -->
+          <div class="mx-2 close-icon fa fa-times"></div>
+        </div>
+
+        <!-- 2nd pop card model  -->
+        <div class="pop-2 d-flex align-items-center my-1 py-2 justify-content-between">
+          <div class="d-flex align-items-center">
+            <span class="pop-icon fa fa-exclamation-circle mx-1"></span>
+            <span class="pop-text mx-1">you have <span class="text-secondary">2 </span>unread notifications.</span>
+            <button class="btn btn-secondary rounded-pill mx-1">Create Now</button>
+          </div>
+          <!-- right cross -->
+          <div class="mx-2 close-icon fa fa-times"></div>
+        </div>
+
+
+        <!--  cards   -->
+        <div class="container-fluid mt-4">
+          <div class="row align-items-center">
+
+
+            <!--=============== card1 ==================-->
+            <div class=" card-1 bg-white col gx-0 me-2">
+              <!-- card head  -->
+              <div class="p-2 d-flex justify-content-between card-head position-sticky top-0 bg-white">
+                <h5>New Brisbane Intructor - 02</h5>
+                <div><span class="fa fa-solid fa-eye mx-1"></span><span class="">View All</span><span
+                    class="fa fa-solid fa-caret-right mx-1"></span></div>
+              </div>
+              <!-- card content  -->
+              <div class="border-bottom">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+                <div class="px-2">
+                  <button class="btn btn-primary text-white rounded-pill me-1 mb-1">Part Time</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Areal Yoga</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Yoga</button>
+                </div>
+              </div>
+              <div class="border-bottom">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+                <div class="px-2">
+                  <button class="btn btn-primary text-white rounded-pill me-1 mb-1">Part Time</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Areal Yoga</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Yoga</button>
+                </div>
+              </div>
+              <div class="border-bottom scroll">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+                <div class="px-2">
+                  <button class="btn btn-primary text-white rounded-pill me-1 mb-1">Part Time</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Areal Yoga</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Yoga</button>
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+                <div class="px-2">
+                  <button class="btn btn-primary text-white rounded-pill me-1 mb-1">Part Time</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Areal Yoga</button>
+                  <button class="btn btn-secondary rounded-pill me-1 mb-1">Yoga</button>
+                </div>
+              </div>
+
+            </div>
+            <!--============================ 2nd card ============== -->
+            <div class="card-2 bg-white col gx-0 ms-2">
+              <!-- card head  -->
+              <div class="d-flex justify-content-between p-2 card-head sticky-top bg-white">
+                  <h5>Most Populor Brisbane Classes + 03</h5>
+                <div><span class="fa fa-solid fa-eye mx-1"></span><span class="">View All</span><span class="fa fa-solid fa-caret-right mx-1"></span>
+                </div>
+              </div>
+              <!-- card content  -->
+              <div class="border-bottom">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+              </div>
+              <div class="border-bottom">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+              </div>
+              <div class="border-bottom">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+              </div>
+              <div class="border-bottom">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                  <span class="card-heads">Thomas Budiman</span>
+                  <div><span class="fa fa-solid fa-clock-o mx-1"></span><span class="">5min</span></div>
+                </div>
+                <div class="px-2">
+                  <span class="me-1">24hours fitness.</span><span class="mx-2">|</span><span class="mx-1">1050 brown
+                    Street, Brisbane</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <!-- main end  -->
+
+    </section>
+    <!-- section end  -->
+
+  </div>
+  <!-- end main content wrapper  -->
+
+</body>
+
+</html>

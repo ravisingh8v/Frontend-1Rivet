@@ -1,0 +1,36 @@
+// body 
+$body-bg:#fafbfd;
+
+
+
+// primary color 
+$primary:#1da597;
+
+$primary-light: lighter($primary,50%);
+$secondary:#222433;
+
+// text 
+$text-primary:#a1b1ba;
+$text-secondary:#264365;
+
+// aside 
+$aside-bg:#ffffff;
+
+// nav 
+$nav-link-color: #a1b1ba;  
+$nav-active-color: $primary;
+$nav-active-bg: $nav-active-color;
+
+// active 
+$active-bg:$body-bg;
+
+// header 
+$header-bg:#ffffff;
+
+
+
+// section 
+
+// card
+$card-bg:#ffffff;
+$btn-light: #1da59744;
