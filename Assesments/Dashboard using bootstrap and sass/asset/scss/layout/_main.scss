@@ -42,12 +42,11 @@ h5{
     width: 4px;
   }
   &::-webkit-scrollbar-track {
-    background: $text-primary;
     border-radius: 20px;
 
   }
   &::-webkit-scrollbar-thumb {
-    background: $primary;
+    background: $scroll-color;
     border-radius: 10px;
   }
 }

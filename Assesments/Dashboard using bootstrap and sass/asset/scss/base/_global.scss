@@ -47,18 +47,3 @@ img {
     color: $text-primary;
 }
 
-::-webkit-scrollbar {
-    width: 4px;
-}
-
-::-webkit-scrollbar-track {
-    background: $btn-light;
-    border-radius: 20px;
-
-}
-
-::-webkit-scrollbar-thumb {
-    background: $primary;
-    border-radius: 10px;
-
-}

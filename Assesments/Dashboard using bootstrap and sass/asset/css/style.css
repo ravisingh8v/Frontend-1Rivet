@@ -42,20 +42,6 @@ img {
   color: #a1b1ba;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(29, 165, 151, 0.2666666667);
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1da597;
-  border-radius: 10px;
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -7869,11 +7855,10 @@ h5 {
   width: 4px;
 }
 .card-1::-webkit-scrollbar-track, .card-2::-webkit-scrollbar-track {
-  background: #a1b1ba;
   border-radius: 20px;
 }
 .card-1::-webkit-scrollbar-thumb, .card-2::-webkit-scrollbar-thumb {
-  background: #1da597;
+  background: rgba(170, 187, 197, 0.7803921569);
   border-radius: 10px;
 }
 
