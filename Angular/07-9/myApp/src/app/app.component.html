@@ -1,0 +1,24 @@
+<!-- whole wrapper  -->
+<div class="wrapper d-flex flex-column h-100">
+
+  <div class="header">
+  <!-- header  -->
+<app-header></app-header>
+</div>
+<!-- end  -->
+
+<section class="d-flex h-100">
+  <aside class="border border-primary h-100"><app-aside></app-aside></aside>
+  <main class="main-wrapper flex-grow-1 border border-danger d-flex  align-items-center justify-content-center h-100">
+
+    <!-- rounting  -->
+    <router-outlet></router-outlet>
+  </main>
+</section>
+
+<!-- footer  -->
+<div class="footer">
+  <app-footer></app-footer>
+</div>
+
+</div>
