@@ -1,0 +1,18 @@
+<h1>{{value}}</h1>
+<div>
+    <input type="text" (input)="getData($event)" #search   >
+    <button (click)="onClick(); search.value='' " > Add User</button>
+</div>
+<div>
+    <!-- <p>{{userlist}}</p> -->
+    <!-- <p>{{users}}</p> -->
+    <ul>
+         <li *ngFor="let person of userlist; let i = index " >
+            {{i+1}}. {{person}}
+        </li>
+    </ul>
+</div>
+
+<button (click)="inc()">+</button>
+<button (click)="dec()">-</button>
+<!-- onclick()="*ngIf='!search.value' ?"  -->

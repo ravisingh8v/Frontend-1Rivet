@@ -1,0 +1,4 @@
+<div class="over">
+    <div *ngFor="let item of user"><P>{{item}}</P></div>
+</div>
+<app-add-user (list)="addData($event)" ></app-add-user>
