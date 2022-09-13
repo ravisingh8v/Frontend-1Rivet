@@ -44,7 +44,7 @@ h5 {
 .card-1 span,
 .card-2 span {
     color: $text-primary;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -53,6 +53,7 @@ h5 {
     color: #264365;
     font-weight: 500;
 }
+
 
 .card-1,
 .card-2 {
@@ -64,11 +65,20 @@ h5 {
     }
 
     box-shadow: $box-shadow;
-    height: 280px;
+    
+    
+
+    
+}
+.card-body{
+    height: 420px;
     overflow-y: scroll;
+    padding-right: 4px;
+    padding-left: 8px;
+
 
     &::-webkit-scrollbar {
-        width: 4px;
+        width: 5px;
     }
 
     &::-webkit-scrollbar-track {
@@ -78,6 +88,5 @@ h5 {
     &::-webkit-scrollbar-thumb {
         background: $scroll-color;
         border-radius: 10px;
-
     }
 }

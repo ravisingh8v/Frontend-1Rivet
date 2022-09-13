@@ -13,8 +13,20 @@ body {
 
 body {
     // background-color: $body-bg;
+    overflow: hidden;
 }
-
+::-webkit-scrollbar {
+    width: 10px;
+  
+}
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+    
+}
+::-webkit-scrollbar-thumb {
+    background: #8d969bd3;
+    border-radius: 10px;
+}
 ul,
 ol {
     list-style: none;
