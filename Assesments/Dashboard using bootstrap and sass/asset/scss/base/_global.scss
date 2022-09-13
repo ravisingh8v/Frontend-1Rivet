@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    // background-color: $body-bg;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+li {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    // color: white;
+}
+
+.unset {
+    all: unset;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $text-secondary;
+    font-weight: 500;
+}
+
+.close-icon {
+    color: $text-primary;
+}
+

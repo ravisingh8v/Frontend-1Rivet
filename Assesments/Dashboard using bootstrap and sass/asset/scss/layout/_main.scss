@@ -1,0 +1,83 @@
+.main {
+    padding: 40px 40px;
+}
+
+h1 {
+    font-size: $h1;
+    color: $text-secondary;
+}
+
+.welcome-para {
+    @include text-theme;
+}
+
+.pop-text {
+    @include text-theme
+}
+
+.pop-1,
+.pop-2 {
+    background-color: $card-bg;
+    box-shadow: $box-shadow;
+
+}
+
+.pop-icon {
+    color: $secondary-icon;
+    font-size: 30px;
+}
+
+h5 {
+    color: $text-secondary;
+    font-size: 20px;
+}
+
+.card-section {
+    margin-top: 35px;
+}
+
+.card-head {
+    box-shadow: $box-shadow;
+    z-index: 1;
+}
+
+.card-1 span,
+.card-2 span {
+    color: $text-primary;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.card-1 .card-heads,
+.card-2 .card-heads {
+    color: #264365;
+    font-weight: 500;
+}
+
+.card-1,
+.card-2 {
+
+    .view{
+        span{
+            font-size: 14px;
+        }
+    }
+
+    box-shadow: $box-shadow;
+    height: 280px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $scroll-color;
+        border-radius: 10px;
+
+    }
+}
