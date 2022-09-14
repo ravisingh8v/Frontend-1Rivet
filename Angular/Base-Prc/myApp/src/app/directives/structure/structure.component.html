@@ -1,0 +1,14 @@
+<div>
+    <button (click)="toggle =!toggle">Click Me</button>
+</div>
+
+
+  <div *ngIf="!toggle; else elseBlock">
+  <h2>Hello</h2>
+  <p>Good morning to you</p>
+  </div>
+
+<div>
+<ng-template #elseBlock>no greeting</ng-template>
+</div>
+ 

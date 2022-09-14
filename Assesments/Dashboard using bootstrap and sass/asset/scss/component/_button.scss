@@ -5,4 +5,8 @@
 }
 .btn-primary-light{
     color: $primary;
+    &:hover{
+        background-color:$primary;
+        color: white;
+    }
 }

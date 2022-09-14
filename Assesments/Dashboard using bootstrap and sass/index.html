@@ -22,15 +22,15 @@
   <div class="wrapper d-flex border h-100">
 
     <!-- sidebar wrapper -->
-    <aside class="sidebar shadow position-relative h-100 flex-nowrap">
+    <aside class="sidebar shadow position-relative h-100 flex-nowrap ">
       <div class="brand-wrapper shadow text-center px-4 py-0 d-flex justify-content-center align-items-center">
         <!-- <img class="brand-img" src="asset/images/Bootstrap Assessment.png" alt="brand-logo"> -->
         <span class="fa fa-regular fa-heart text-primary pe-1 fs-3"></span>
         <span class="brand-name fs-4">FITTLE</span>
       </div>
       <!-- navigation  -->
-     
-        <ul class="d-flex flex-column align-items-center nav flex-column overflow-auto flex-nowrap h-100">
+     <div class="h-100 ">
+        <ul class="d-flex flex-column align-items-center nav flex-column h-100 overflow-auto">
           <li class="nav-item ">
             <a class="nav-link active px-0 py-4 d-flex flex-column text-center" href="#"><span
                 class="nav-icon fa fa-dashboard p-1"></span><span class="nav-text">Dashboard</span></a>
@@ -60,6 +60,7 @@
                 class="nav-icon fa fa-gear p-1"></span><span class="nav-text">Settings</span></a>
           </li>
         </ul>
+      </div>
     </aside>
     <!-- sidebar end  -->
 
@@ -70,16 +71,16 @@
       <header class="header d-flex px-4 py-5 shadow justify-content-between align-items-center">
         <!-- left side input feild  -->
         <div class="header-left flex-grow-1 d-flex align-items-center">
-          <label for="search" class="header-icon fa fa-solid fa-search pe-1 p-1"></label>
+          <label for="search" class="header-icon fa fa-solid fa-search pe-1 p-1 c-p"></label>
           <input type="text" class="unset header-search-box w-100 p-1" placeholder="Search" id="search">
         </div>
         <!-- end -->
         <!-- right side  -->
         <div class="header-right d-flex align-items-center">
-          <span class="header-icon fa fa-solid fa-bell me-4 position-relative"><span
+          <span class="header-icon fa fa-solid fa-bell me-4 position-relative c-p"><span
               class="position-absolute noti-bedge bg-danger rounded-circle"></span></span>
           <span class="header-text me-3 ">Ryan Gosling</span>
-          <div class="image-wrapper">
+          <div class="image-wrapper c-p">
             <img src="asset/images/profile.jpg" alt="profile-pic">
           </div>
         </div>
@@ -123,9 +124,9 @@
               <!--=============== card1 ==================-->
               <div class=" card-1 bg-white me-lg-4 my-2 ">
                 <!-- card head  -->
-                <div class="p-3 py-4 d-flex justify-content-between card-head position-sticky top-0 bg-white">
+                <div class="p-3 py-4 d-flex justify-content-between card-head bg-white">
                   <h5 class="mb-0">New Brisbane Intructor - 02</h5>
-                  <div class="view"><span class="fa fa-solid fa-eye mx-1"></span><span class="">View All</span><span
+                  <div class="view c-p"><span class="fa fa-solid fa-eye mx-1"></span><span class="">View All</span><span
                       class="fa fa-solid fa-caret-right mx-1"></span></div>
                 </div>
                 <!-- card content  -->
@@ -200,9 +201,9 @@
             <div class="card-wrapper col-12 col-lg-6 g-0">
               <div class="card-2 bg-white ms-lg-4 my-2">
                 <!-- card head  -->
-                <div class="d-flex justify-content-between p-3 py-4 card-head sticky-top bg-white">
+                <div class="d-flex justify-content-between p-3 py-4 card-head  bg-white">
                   <h5 class="mb-0">Most Populor Brisbane Classes + 03</h5>
-                  <div class="view"><span class="fa fa-solid fa-eye mx-1"></span><span class="">View All</span><span
+                  <div class="view c-p"><span class="fa fa-solid fa-eye mx-1"></span><span class="">View All</span><span
                       class="fa fa-solid fa-caret-right mx-1"></span>
                   </div>
                 </div>

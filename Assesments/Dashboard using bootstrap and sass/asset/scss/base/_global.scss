@@ -15,8 +15,10 @@ body {
     // background-color: $body-bg;
     overflow: hidden;
 }
+// custom scroll bar 
+
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   
 }
 ::-webkit-scrollbar-track {
@@ -24,9 +26,10 @@ body {
     
 }
 ::-webkit-scrollbar-thumb {
-    background: #8d969bd3;
+    background: #8d969b8f;
     border-radius: 10px;
 }
+
 ul,
 ol {
     list-style: none;
@@ -57,5 +60,9 @@ img {
 
 .close-icon {
     color: $text-primary;
+    cursor: pointer;
+}
+.c-p{
+    cursor: pointer;
 }
 
