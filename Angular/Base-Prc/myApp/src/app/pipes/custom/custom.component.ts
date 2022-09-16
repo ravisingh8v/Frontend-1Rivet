@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom.component.scss']
 })
 export class CustomComponent implements OnInit {
-
-  constructor() { }
+num:any
+  constructor() { 
+this.num=0
+  }
 
   ngOnInit(): void {
   }
 
+input(e:any){
+this.num = e.target.value
+}
 }

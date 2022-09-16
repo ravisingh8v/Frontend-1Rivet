@@ -7,6 +7,9 @@ import { DirectivesModule } from './directives/directives.module';
 import { PipesModule } from './pipes/pipes.module';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
+import { ServerListComponent } from './server-list/server-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,12 +17,19 @@ import { ErrorComponent } from './error/error.component';
     AppComponent,
     HomeComponent,
     ErrorComponent,
+    ServerListComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DirectivesModule,
-    PipesModule
+    PipesModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  exports: [
+
   ],
   providers: [],
   bootstrap: [AppComponent]

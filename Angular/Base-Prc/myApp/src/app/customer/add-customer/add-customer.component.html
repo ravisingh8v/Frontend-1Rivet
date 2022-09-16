@@ -1,9 +1,25 @@
 <h1 >{{title | uppercase}}</h1>
 <p>here form will be open</p>
-<input type="text" name="" id="" [placeholder]="placeholder" />
+
+
+<!-- form  -->
+<form #userForm='ngForm'>
+
+<input type="text" name="firstName"]>
+
+
+
+
+</form>
+
+<!-- form end  -->
 
 <!-- <h2>{{id}}</h2> -->
 
 <div>
-    <button (click)="save()">save</button>
+    <button *ngIf="!id" (click)="save()">{{btn}}</button>
+</div>
+
+<div>
+    <button *ngIf="id" (click)="edit()" >Save Edit</button>
 </div>

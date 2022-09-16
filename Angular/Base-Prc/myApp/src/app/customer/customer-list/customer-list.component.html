@@ -8,8 +8,8 @@
         </tr>
         <tr *ngFor="let customer of customers">
             <!-- this is the way for going step back and give path as id for object -->
-            <td [routerLink]="['../edit',customer.id]">{{customer.name}}</td> 
-            <td [routerLink]="['../edit',customer.id]">{{customer.email}}</td>
+            <td >{{customer.name}}</td> 
+            <td >{{customer.email}}</td><button [routerLink]="['../edit',customer.id]">edit</button>
         </tr>
     </thead>
 </table>
