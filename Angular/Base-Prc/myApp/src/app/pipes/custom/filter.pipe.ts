@@ -10,7 +10,7 @@ export class FilterPipe implements PipeTransform {
   // }
 
   transform(n: number,extension: string = ' Kilograms') {
-    return (n / 1000).toFixed(3) + extension;
+    return (n / 1000).toFixed(2) + extension;
   }
 
 

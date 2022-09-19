@@ -1,21 +1,52 @@
-<div class=""></div>
+<div class="main d-flex flex-column h-100">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="structure">App-Structure</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="cst-pipe">Custom-pipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ibt-pipe">Inbuilt-Pipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="customer">customer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="service-list">service-list</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
-
-
-
-<div>
-  <button routerLink='home'>Home</button>
-  
-  <button routerLink="structure">App-Structure</button>
-  <!-- <app-structure></app-structure> -->
-  <button routerLink="cst-pipe">Custom-pipe</button>
-  <!-- <app-custom></app-custom> -->
-  <button routerLink="ibt-pipe">Inbuilt-Pipe</button>
-  <!-- <app-inbuilt></app-inbuilt> -->
-  <button routerLink="customer">customer</button>
-  <button routerLink="service-list">service-list</button>
-</div>
-<br>
-<div>
+<div class="h-100 border border-danger d-flex justify-content-center align-items-center">
   <router-outlet></router-outlet>
+</div>
+
 </div>

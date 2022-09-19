@@ -3,22 +3,32 @@
 
 
 <!-- form  -->
-<form #userForm='ngForm'>
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
 
-<input type="text" name="firstName"]>
+<input type="text" class="mb-3" name="firstName" [(ngModel)]='users.firstName' #firstName="ngModel" required=""><br>
+<div *ngIf="(isSubmited && firstName.invalid) || (firstName.touched && firstName.invalid)">
+    <p class="text-danger">{{error}}</p>
+</div>
 
 
+<input type="text" class="mb-3" name="lastName" [(ngModel)]='users.lastName' #lastName="ngModel" required="" ><br>
+<div *ngIf="(isSubmited && lastName.invalid)">
+    <p class="text-danger">{{error}}</p>
+</div>
+<!-- <div  *ngIf="">
+    <p style="visibility:hidden;" *ngif=""></p>
+</div> -->
 
-
+<button type="submit" *ngIf="!id" [disabled]="userForm.form.invalid" routerLink="../../cst-pipe">Submit</button>
 </form>
 
 <!-- form end  -->
 
 <!-- <h2>{{id}}</h2> -->
 
-<div>
+<!-- <div>
     <button *ngIf="!id" (click)="save()">{{btn}}</button>
-</div>
+</div> -->
 
 <div>
     <button *ngIf="id" (click)="edit()" >Save Edit</button>

@@ -1,4 +1,4 @@
 export class Users {
-    private firstName:string;
-    private lastName : string;
+    public 'firstName':string;
+    public 'lastName' : string;
 }

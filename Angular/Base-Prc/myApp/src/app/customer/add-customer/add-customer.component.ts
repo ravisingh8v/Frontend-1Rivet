@@ -14,9 +14,13 @@ import { Users } from '../users.model';
 
 
 export class AddCustomerComponent implements OnInit {
-  @ViewChild ('userForm') userform:ngForm;
+  @ViewChild('userForm') cusForm?: NgForm;
 
   users: Users
+  car:any={}
+error:string
+isSubmited:boolean
+
 
   title: string
   placeholder: string
@@ -26,6 +30,7 @@ export class AddCustomerComponent implements OnInit {
     private activated: ActivatedRoute,
     private router: Router
   ) {
+
     this.users= new Users;
 
 
@@ -36,7 +41,10 @@ export class AddCustomerComponent implements OnInit {
     this.title = this.id ? 'edit customer' : 'Add';
     this.placeholder = this.id ? 'edit customer' : 'Add';
     this.btn = this.id ? 'edit' : 'add';
+    
 
+    this.error="this feild is required";
+    this.isSubmited=false;
   }
 
   ngOnInit(): void {
@@ -46,5 +54,12 @@ export class AddCustomerComponent implements OnInit {
   }
   edit(){
     this.router.navigate(['customer', 'customer-list'])
+  }
+
+  onSubmit(){
+  
+    this.isSubmited=true;
+    console.log(this.cusForm);
+     
   }
 }
