@@ -1,25 +1,46 @@
-<h1 >{{title | uppercase}}</h1>
+<h1>{{title | uppercase}}</h1>
 <p>here form will be open</p>
 
 
 <!-- form  -->
-<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+<form #userForm="ngForm" class="row g-3 needs-validation" (ngSubmit)="onSubmit()">
 
-<input type="text" class="mb-3" name="firstName" [(ngModel)]='users.firstName' #firstName="ngModel" required=""><br>
-<div *ngIf="(isSubmited && firstName.invalid) || (firstName.touched && firstName.invalid)">
-    <p class="text-danger">{{error}}</p>
-</div>
+    <div class="col-md-4">
+        <label class="form-label">First name</label>
+        <input type="text" class="form-control" name="firstName" [(ngModel)]='users.firstName' #firstName="ngModel"
+            required>
+        <div *ngIf="firstName.invalid && (isSubmited || firstName.touched || firstName.dirty)">
+            <p class="text-danger">{{error}}</p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Last name</label>
+        <input type="text" class="form-control has-validation" name="lastName" [(ngModel)]='users.lastName' #lastName="ngModel"  required>
+        <div *ngIf="lastName.invalid && (isSubmited || lastName.touched || lastName.dirty)">
+            <p class="text-danger" *ngIf="lastName.errors">{{error}}</p>
+        </div>
+    </div>
+    
+
+    <!-- <input type="text" class="mb-3" name="firstName" [(ngModel)]='users.firstName' #firstName="ngModel" required=""><br>
+    <div *ngIf="(isSubmited && firstName.invalid) || (firstName.touched && firstName.invalid)">
+        <p class="text-danger">{{error}}</p>
+    </div>
 
 
-<input type="text" class="mb-3" name="lastName" [(ngModel)]='users.lastName' #lastName="ngModel" required="" ><br>
-<div *ngIf="(isSubmited && lastName.invalid)">
-    <p class="text-danger">{{error}}</p>
-</div>
-<!-- <div  *ngIf="">
+    <input type="text" class="mb-3" name="lastName" [(ngModel)]='users.lastName' #lastName="ngModel" required=""><br>
+    <div *ngIf="(isSubmited && lastName.invalid)">
+        <p class="text-danger">{{error}}</p>
+    </div> -->
+    <!-- <div  *ngIf="">
     <p style="visibility:hidden;" *ngif=""></p>
 </div> -->
 
-<button type="submit" *ngIf="!id" [disabled]="userForm.form.invalid" routerLink="../../cst-pipe">Submit</button>
+    <button type="submit" class="btn btn-primary" *ngIf="!id"  >Submit</button>
+    <!-- for disabling btn  -->
+    <!-- routerLink="../../customer" -->
+    <!-- [disabled]="userForm.form.invalid" -->
 </form>
 
 <!-- form end  -->
@@ -31,5 +52,5 @@
 </div> -->
 
 <div>
-    <button *ngIf="id" (click)="edit()" >Save Edit</button>
+    <button *ngIf="id" (click)="edit()">Save Edit</button>
 </div>

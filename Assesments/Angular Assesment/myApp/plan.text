@@ -1,0 +1,10 @@
+1.normal cmd
+ng g c component-name
+ng g pipe name
+
+2.############ Lazy Loading Module Code #############
+ng g m name --route name -m app
+
+3.component with folder
+ng g c foldername/comName
+

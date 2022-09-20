@@ -60,6 +60,7 @@ isSubmited:boolean
   
     this.isSubmited=true;
     console.log(this.cusForm);
+
      
   }
 }

@@ -6,7 +6,8 @@ import { CustomerComponent } from './customer.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { EditComponent } from './edit/edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 
@@ -15,12 +16,14 @@ import { FormsModule } from '@angular/forms';
     CustomerComponent,
     CustomerListComponent,
     AddCustomerComponent,
-    EditComponent
+    EditComponent,
+    ReactiveFormComponent
   ],
   imports: [
     CommonModule,
     CustomerRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     FormsModule

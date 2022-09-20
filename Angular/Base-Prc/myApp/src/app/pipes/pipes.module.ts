@@ -11,7 +11,8 @@ import { FilterPipe } from './custom/filter.pipe';
   declarations: [
     CustomComponent,
     InbuiltComponent,
-    FilterPipe
+    FilterPipe,
+
   ],
   imports: [
     CommonModule,

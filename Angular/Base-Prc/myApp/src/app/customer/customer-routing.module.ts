@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerComponent } from './customer.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
 
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: 'customer-list', component: CustomerListComponent },
       { path: 'edit/:id', component: AddCustomerComponent },
       { path: 'add-customer', component: AddCustomerComponent },
+      {path:'reactive-from', component:ReactiveFormComponent}
 
     ]
   },
