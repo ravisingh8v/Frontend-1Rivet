@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { CommonService } from 'src/app/common.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { CommonServicesService } from '../common-services.service';
+
 
 @Component({
   selector: 'app-server-list',
@@ -7,23 +10,52 @@ import { CommonService } from 'src/app/common.service';
   styleUrls: ['./server-list.component.scss']
 })
 export class ServerListComponent implements OnInit {
-  collection:any=[]
+  da: any;
+  form: FormGroup
+  data: any = []
+  public formData:any
   constructor(
-    private CommonService:CommonService
+    public formbuilder: FormBuilder,
+    public common: CommonServicesService,
+    public httpClient:HttpClient
   ) {
-    
+    this.form = this.formbuilder.group({
+      name: [''],
+      salary: ['']
+    })
+    this.formData=this.form.value
+   
   }
 
-  
-  
+onAdd(e:any){
+  this.common.addData(e)
+  .subscribe(
+        (data:any) => {
+            console.log(data);
+        }
+      )
+      console.log(this.formData)
+//  this.httpClient.post(`http://localhost:3000/employees`,{name:'mark'}).subscribe(
+//     (data:any) => {
+//         console.log(data);
+//     }
+//   )
+}
+
   ngOnInit(): void {
-    this.CommonService.getCustomer()
-    .subscribe(response => {
-      this.collection = response;
-      console.log(this.collection)
-    });
-    console.log("hello");
+
+    this.common.getData().subscribe((result) => {
+      this.data = result
+      console.log(this.data)
+
+
+    })
+      ;
+    //  console.log(this.data)
+
+
   }
+
 
 
 }

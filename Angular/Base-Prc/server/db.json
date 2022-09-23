@@ -1,9 +1,67 @@
 {
-    "customer": [
-      { "id": 1, "Name": "Ravi", "Email": "typicode@gmail.com" },
-      { "id": 2, "Name": "Amresh", "Email": "typico@gmail.com" }
-      
-      
-    ]
-   
-  }
+  "employees": [
+    {
+      "id": 1,
+      "name": "Pankaj",
+      "salary": "10000"
+    },
+    {
+      "name": "David",
+      "salary": "5000",
+      "id": 2
+    },
+    {
+      "name": "mark",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "name": "",
+      "salary": "",
+      "id": 8
+    },
+    {
+      "name": "dddd",
+      "salary": "dddd",
+      "id": 9
+    },
+    {
+      "name": "ddd",
+      "salary": "ddded",
+      "id": 10
+    },
+    {
+      "name": "test",
+      "salary": "rrrrrr",
+      "id": 11
+    },
+    {
+      "name": "gggg",
+      "salary": "gggggg",
+      "id": 12
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Pankaj",
+      "salary": "10000"
+    },
+    {
+      "name": "David",
+      "salary": "5000",
+      "id": 2
+    }
+  ]
+}
