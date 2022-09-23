@@ -1,0 +1,18 @@
+<div class="w-25 m-4">
+<form action="" [formGroup]="form">
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name" formControlName="name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Email" aria-label="Email" formControlName="email">
+    </div>
+  </div>
+</form>
+</div>
+<div class="w-25 m-4">
+<button class="btn btn-secondary">Reset</button>
+<button class="btn btn-success" (click)="onSubmit()">Submit</button>
+</div>
+
+<app-employee-list [data]="data"></app-employee-list>

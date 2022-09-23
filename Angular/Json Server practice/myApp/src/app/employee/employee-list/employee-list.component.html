@@ -1,0 +1,22 @@
+<table class="w-100">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of data">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>
+            <button class="btn btn-info">details</button>
+            <button class="btn btn-warning" (click)="onEdit(item.id)" [routerLink]="['../',item.id ]">edit</button>
+            <button class="btn btn-danger" (click)="onDelete(item.id)">delete</button>
+        </td>
+    </tr>
+</tbody>
+</table>
