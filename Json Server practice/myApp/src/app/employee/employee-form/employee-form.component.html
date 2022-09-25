@@ -1,0 +1,30 @@
+<h3>
+<p class="text-center mt-2">{{title}}</p>
+</h3>
+
+<div class="m-4">
+<form action="" [formGroup]="form">
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name" formControlName="firstName">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="lastName" aria-label="lastName" formControlName="lastName">
+    </div>
+    <div class="col">
+      <input type="tel" class="form-control" placeholder="Email" aria-label="Email" formControlName="email">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="contact" aria-label="contact" formControlName="contact">
+    </div>
+  </div>
+</form>
+</div>
+<div class="m-4 text-center">
+<button class="btn btn-secondary" (click)="onReset()">Reset</button>
+<button class="btn btn-success" (click)="onSubmit()">Submit</button>
+</div>
+
+<div>
+<app-employee-list [data]="data"></app-employee-list>
+</div>

@@ -17,23 +17,22 @@ baseUrl="http://localhost:3000/"
       return this.http.get(url)
     }
 
-    postData(user:Employee):Observable<any>{
+    postData(user:Employee[]):Observable<any>{
       const url = this.baseUrl + 'users'
       return this.http.post(url,user)
     }
 
     onDelete(id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id 
+      const url = this.baseUrl + 'users/' + id ;
       return this.http.delete(url)
     }
-    editData(user:Employee,id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id 
-      return this.http.put(url,user)
+    editData(employee:Employee[] ,id:number):Observable<any>{
+      const url = this.baseUrl + 'users/' + id ;
+      return this.http.put(url,employee)
     }
 
-    getUserById(id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id 
-      return this.http.get(url)
+    getEmployeeById(id: number): Observable<any> {
+      const url = this.baseUrl + 'users/'+ id;
+      return this.http.get(url);
     }
-    
 }

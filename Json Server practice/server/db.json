@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "firstName": "ravi",
+      "lastName": "singh",
+      "email": "ravi@gmail.com",
+      "contact": "966288456",
+      "id": 1
+    },
+    {
+      "firstName": "suraj",
+      "lastName": "singh",
+      "email": "sruaj@gmail.com",
+      "contact": "6846848",
+      "id": 2
+    },
+    {
+      "firstName": "sahil",
+      "lastName": "singh",
+      "email": "sahil@gmail.com",
+      "contact": "5464845454",
+      "id": 7
+    }
+  ]
+}
