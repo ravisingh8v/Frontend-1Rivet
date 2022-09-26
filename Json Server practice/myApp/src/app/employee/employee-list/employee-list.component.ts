@@ -20,11 +20,13 @@ this.data = []
   ngOnInit(): void {
 
   }
+
   onEdit(id:any){
     // this.usersService.editData(id)
   this.route.navigate(['employee/edit',id])
   
   }
+
   onDelete(id: any) {
     this.usersService.onDelete(id).subscribe((Response) => {
       this.getUserDetails()
@@ -33,6 +35,7 @@ this.data = []
   getDetails(id:any){
     this.route.navigate(['employee/details',id])
   }
+  
   getUserDetails() {
     this.usersService.getData().subscribe((Response: any) => {
       this.data = Response

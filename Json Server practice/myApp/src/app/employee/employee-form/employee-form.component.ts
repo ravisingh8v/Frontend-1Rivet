@@ -15,72 +15,93 @@ export class EmployeeFormComponent implements OnInit {
   public data: Employee[]
   public form: FormGroup
   public id: any
-  public title:string
+  public title: string
+  public isSubmit: boolean
+  public btn:string
   constructor(
     public formbuilder: FormBuilder,
     private usersService: EmployeeService,
     private router: ActivatedRoute,
-    public route:Router) {
+    public route: Router) {
 
+
+    // initializing var 
+    this.isSubmit = false
     this.data = []
-    this.title='Add Employee'
+    this.title = 'Add Employee'
+    this.btn = 'Save'
+    
+
+    // form validation 
     this.form = this.formbuilder.group({
 
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', []],
-      contact:['',[]],
-      
+      contact: [[]],
+      date: [Date, []]
+
 
       // name:['',[]]
     })
     console.log(router);
+    console.log(this.form);
+
+
+    // patching data here 
 
     this.router.params.subscribe(response => {
       this.id = response['id'];
-      this.getEmployeeById()
+      if (this.id) {
+        this.getEmployeeById()
+      }
 
-      if(this.id){
-        this.title='Edit Employee'
+      // set page title according to  page 
+      if (this.id) {
+        this.title = 'Edit Employee'
+        this.btn = 'Edit'
       }
     })
 
-  
+
 
 
   }
 
-  
+
 
   ngOnInit(): void {
     this.getUserDetails()
   }
 
-  
+
 
   onSubmit() {
-
+    this.isSubmit = true
     if (this.form.valid) {
-      if(this.id){
-        this.usersService.editData(this.form.value,this.id).subscribe((response:any)=>{
+
+      if (this.id) {
+        this.usersService.editData(this.form.value, this.id).subscribe((response: any) => {
           this.getUserDetails();
         })
-        
+
       } else {
         this.usersService.postData(this.form.value).subscribe((Response: any) => {
+          console.log(Response);
+
           this.getUserDetails();
-          
+
         });
-        
+
       }
       this.onReset()
       this.route.navigate(['employee/list'])
-    } 
+    }
   }
 
-onReset(){
-  this.form.reset()
-}
+  onReset() {
+    this.form.reset()
+  }
 
   // this are the common methods we using many times 
   public getUserDetails() {
@@ -88,6 +109,8 @@ onReset(){
       this.data = Response
     })
   }
+
+
   public getEmployeeById(): void {
     this.usersService.getEmployeeById(this.id).subscribe((users: Employee) => {
       this.form.patchValue(users);

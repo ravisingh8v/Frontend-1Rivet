@@ -6,7 +6,12 @@
 <form action="" [formGroup]="form">
 <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name" aria-label="First name" formControlName="firstName">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name" formControlName="firstName" 
+      [ngClass]=" {'is-invalid':(form.controls['firstName'].errors?.['required'] && form.controls['firstName'].touched ) || (isSubmit && form.controls['firstName'].invalid)}"
+      >
+      <div *ngIf= "form.controls['firstName'].errors?.['required'] && form.controls['firstName'].touched " class="invalid-feedback">
+        <p>This Feild is required</p>
+      </div>
     </div>
     <div class="col">
       <input type="text" class="form-control" placeholder="lastName" aria-label="lastName" formControlName="lastName">
@@ -17,12 +22,15 @@
     <div class="col">
       <input type="text" class="form-control" placeholder="contact" aria-label="contact" formControlName="contact">
     </div>
+    <div class="col">
+      <input type="date" class="form-control" placeholder="date" aria-label="date" formControlName="date">
+    </div>
   </div>
 </form>
 </div>
 <div class="m-4 text-center">
 <button class="btn btn-secondary" (click)="onReset()">Reset</button>
-<button class="btn btn-success" (click)="onSubmit()">Submit</button>
+<button class="btn btn-success" (click)="onSubmit()">{{btn}}</button>
 </div>
 
 <div>

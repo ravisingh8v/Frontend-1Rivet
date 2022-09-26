@@ -2,8 +2,8 @@ export class Employee {
 
     id?: number;
     firstName?: string;
-    lastName?:string;
+    lastName?: string;
     email?: string;
-    contact?:number;
-
+    contact?: number;
+    date?: Date
 }

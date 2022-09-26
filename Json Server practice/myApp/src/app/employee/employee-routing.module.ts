@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
@@ -10,9 +10,10 @@ children:
   {path:'', redirectTo:'list',pathMatch:'full' },
   {path:'list', component:EmployeeFormComponent},
   {path:'edit/:id', component:EmployeeFormComponent},
+  {path:'details/:id', component:EmployeeDetailsComponent},
 ]
 },
-{path:'details/:id', component:EmployeeDetailsComponent},
+// {path:'details/:id', component:EmployeeDetailsComponent},
 ];
 
 @NgModule({

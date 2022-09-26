@@ -26,6 +26,7 @@ baseUrl="http://localhost:3000/"
       const url = this.baseUrl + 'users/' + id ;
       return this.http.delete(url)
     }
+    
     editData(employee:Employee[] ,id:number):Observable<any>{
       const url = this.baseUrl + 'users/' + id ;
       return this.http.put(url,employee)

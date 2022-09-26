@@ -1,15 +1,31 @@
-<ul>
+<div class="p-5 text-center">
+    <h2>Employee/Users Details</h2>
+    
+
+    
+    <ul class="text-start">
     <li>
         <span class="detail-head">Employee-Id: </span>    
         <span class=""><td>{{users.id}}</td></span>     
     </li>
     <li>
         <span class="detail-head">Employee Name: </span>
-        <span class=""><td>{{users.firstName}}</td></span>
+        <span class=""><td>{{users.firstName | titlecase}}</td></span>
+    </li>
+    <li>
+        <span class="detail-head">Last Name: </span>
+        <span class=""><td>{{users.lastName | titlecase}}</td></span>
     </li>
     <li>
         <span class="detail-head">Employee Email: </span>
         <span class=""><td> {{users.email}}</td></span>
     </li>
+    <li>
+        <span class="detail-head">Contact: </span>
+        <span class=""><td> {{users.contact}}</td></span>
+    </li>
 </ul>
+<button class="btn btn-secondary" routerLink="../../list">Back</button>
 
+
+</div>
