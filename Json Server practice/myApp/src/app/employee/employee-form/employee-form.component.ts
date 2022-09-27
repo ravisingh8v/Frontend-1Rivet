@@ -54,13 +54,12 @@ export class EmployeeFormComponent implements OnInit {
       this.id = response['id'];
       if (this.id) {
         this.getEmployeeById()
-      }
-
-      // set page title according to  page 
-      if (this.id) {
         this.title = 'Edit Employee'
         this.btn = 'Edit'
       }
+
+      // set page title according to  page 
+
     })
 
 
