@@ -15,6 +15,7 @@ const routes: Routes = [
   {path:'ibt-pipe', component:InbuiltComponent},
   {path:'service-list', component:ServerListComponent},
   { path: 'customer', loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule) },
+  { path: 'RX-JS', loadChildren: () => import('./rx-js/rx-js.module').then(m => m.RXJSModule) },
   {path:'**', component:ErrorComponent}
 ];
 
