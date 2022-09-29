@@ -37,17 +37,21 @@
           </li>
 
           <!-- rxjs drop dwon  -->
-          <li class="nav-item dropdown">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="RX-JS">RX-JS</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             RX-JS
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkRight">
-              <li><a class="dropdown-item" routerLink="RX-JS">Observable</a></li>
+              <li><a class="dropdown-item" routerLink="observable">Observable</a></li>
               <li >
-                <a class="dropdown-item" href="#"> Subject &raquo; </a>
+                <a class="dropdown-item" > Subject &raquo; </a>
                 <ul class="dropdown-menu dropdown-submenu dropdown-submenu-left">
                   <li class="">
-                    <a class="dropdown-item" href="#">Subject</a>
+                    <a class="dropdown-item" routerLink="subject">Subject</a>
                   </li>
                   <li>
                     <hr class="dropdown-divider">
@@ -67,7 +71,7 @@
                 </ul>
               </li>
             </ul>
-          </li>
+          </li> -->
 
 
         </ul>
@@ -79,7 +83,8 @@
     </div>
   </nav>
 
-  <div class="h-100 border border-danger d-flex justify-content-center align-items-center">
+  <div class="h-100 border border-danger">
+    <!-- d-flex justify-content-center align-items-center -->
     <router-outlet></router-outlet>
   </div>
 

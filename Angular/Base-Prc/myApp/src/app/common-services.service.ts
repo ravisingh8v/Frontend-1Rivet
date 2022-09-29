@@ -1,20 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CommonServicesService {
-  url = 'http://localhost:3000/employees'
 
-  constructor(public http: HttpClient) { }
 
-  getData() {
-    return this.http.get(this.url)
+  constructor() { }
 
+  print(data: any, elemId: any) {
+    let el = document.createElement('li');
+    el.innerHTML = data;
+    document.getElementById(elemId)?.appendChild(el)
   }
-  addData(data: any) {
-    debugger
-    return this.http.post(this.url, data.value)
+
+  send(){
+    
   }
 }

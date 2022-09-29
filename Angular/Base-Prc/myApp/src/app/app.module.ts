@@ -7,7 +7,7 @@ import { DirectivesModule } from './directives/directives.module';
 import { PipesModule } from './pipes/pipes.module';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
-import { ServerListComponent } from './server-list/server-list.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -17,7 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     ErrorComponent,
-    ServerListComponent,
 
   ],
   imports: [
