@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+//------------------------// 
 import { StructureComponent } from './directives/structure/structure.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { CustomComponent } from './pipes/custom/custom.component';
 import { InbuiltComponent } from './pipes/inbuilt/inbuilt.component';
-import { ObservableComponent } from './rx-js/observable/observable.component';
-import { SubjectComponent } from './rx-js/subject/subject/subject.component';
+
 
 
 const routes: Routes = [

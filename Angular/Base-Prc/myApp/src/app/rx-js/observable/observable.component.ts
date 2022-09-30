@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, of,map ,pipe, from, concat} from 'rxjs';
+import { Conditional } from '@angular/compiler';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable, of, map, pipe, from, concat, fromEvent, forkJoin, timer, interval, merge, take } from 'rxjs';
 import { CommonServicesService } from 'src/app/common-services.service';
 
 
@@ -15,11 +16,12 @@ export class ObservableComponent implements OnInit {
   b = 6
   public obj1: any
   public obj2: any
-  techStatus:string
-  constructor(private createElem:CommonServicesService) {
+  techStatus: string
+  x: any
+  constructor(private createElem: CommonServicesService) {
 
-this.techStatus=''
-
+    this.techStatus = ''
+    this.x = 'Test String'
     // const observable$ = new Observable((observer) => {
 
     //   observer.next(1);
@@ -45,13 +47,13 @@ this.techStatus=''
     // without timeout 
     // const observable$ = new Observable((observer) => {
 
-      // observer.next(1);
-      // observer.next(2);
-      // observer.next(3);
-      // observer.next(4);
-      // observer.error("error") 
-      // observer.complete();
-      
+    // observer.next(1);
+    // observer.next(2);
+    // observer.next(3);
+    // observer.next(4);
+    // observer.error("error") 
+    // observer.complete();
+
     // });
     // console.log('before any one subscripe');
 
@@ -59,18 +61,18 @@ this.techStatus=''
     // observable$.subscribe(res=>{
     //   console.log(res)
     //   this.createElem.print(res,'list')
-     
-      // next(x) {
-      //   console.log(`${x}-obj1`)
-      // },
-      // error(error) {
-      //   console.log(error)
-      // },
-      // complete() {
-      //   console.log('completed');
 
-        
-      // }
+    // next(x) {
+    //   console.log(`${x}-obj1`)
+    // },
+    // error(error) {
+    //   console.log(error)
+    // },
+    // complete() {
+    //   console.log('completed');
+
+
+    // }
     // });
 
     // this.obj2 = observable$.subscribe({
@@ -83,52 +85,118 @@ this.techStatus=''
   ngOnInit(): void {
 
 
-//OF OPERATOR ==============================================================================================
+    //OF OPERATOR ==============================================================================================
 
-  // of(11,22,33,44,55)    
-  //   .pipe(
-  //     map(x=>x*2)
-  //   ).subscribe({
-  //     next:(x)=>{
-  //       this.createElem.print(x,'list')
-        
-  //     }
-  //   });
+    // of(11,22,33,44,55)    
+    //   .pipe(
+    //     map(x=>x*2)
+    //   ).subscribe({
+    //     next:(x)=>{
+    //       this.createElem.print(x,'list')
 
-  
-
-
-  // from operator =========================================================================================
-let array1=[1,2,3,4,5];
-let array2=['a','b','c','d','e'];
-
-// from([array1,array2,'toh kese hein app log']).subscribe({next:(x)=>{
-//   console.log(x);
-//   this.createElem.print(x,'list')
-  
-// }})
-
-// concat(array1,array2).subscribe({next:(x)=>{
-//   console.log(x);
-//   this.createElem.print(x,'list')
-  
-// }})
-
-
-// of using array ===========================
-// of(array1,array2,'toh kese hein aap log')    
-//    .subscribe({
-//       next:(x)=>{
-//         this.createElem.print(x,'list')
-        
-//       }
-//     });
+    //     }
+    //   });
 
 
 
 
+    // from operator =========================================================================================
+    let array1 = [1, 2, 3, 4, 5];
+    let array2 = ['a', 'b', 'c', 'd', 'e'];
 
-  // normal observable creation  ===========================================================================
+    // from([array1,array2,'toh kese hein app log']).subscribe({next:(x)=>{
+    //   console.log(x);
+    //   this.createElem.print(x,'list')
+
+    // }})
+
+    // concat(array1,array2).subscribe({next:(x)=>{
+    //   console.log(x);
+    //   this.createElem.print(x,'list')
+
+    // }})
+
+
+    // of using array ===========================
+    // of(array1,array2,'toh kese hein aap log')    
+    //    .subscribe({
+    //       next:(x)=>{
+    //         this.createElem.print(x,'list')
+
+    //       }
+    //     });
+
+
+    const documents = document.querySelectorAll('#btn1')
+
+    const clicks = fromEvent(documents, 'click')
+
+    clicks.subscribe({
+      next: () => {
+        this.createElem.print(this.x, 'list')
+      }
+
+    })
+
+
+
+    // using ofrkJoin Method ================================================================================
+
+    // const forkjoinObs = forkJoin({
+    //   ofObs: of(1, 2, 3),
+    //   // resolve: Promise.resolve('connected to the server'),
+    //   reject: Promise.reject('not connected to the server'),
+    //   Timer: timer(0)
+
+    // })
+    // forkjoinObs.subscribe({
+    //   next: (x) => {
+    //     console.log(x);
+    //     // setTimeout(()=>{
+    //       this.createElem.print(x['Timer'],'list')
+    //     // },1000)
+    //     // setTimeout(()=>{
+    //       this.createElem.print(x['ofObs'],'list')
+    //     // },2000)
+    //     // setTimeout(()=>{
+    //       this.createElem.print(x['reject'],'list')
+    //     // },3000)
+
+
+    //   },
+    //   error:(x)=>{
+    //     this.createElem.print(x,'list')
+    //   },
+
+    //   complete: () => {
+    //     setTimeout(()=>{
+    //       console.log('Fork Join Completed');
+    //       this.createElem.print('Comleted','list')
+    //     },4000)
+    //   }
+    // })
+
+
+    // Merge Operator  =======================================================================================
+
+    // take operator give data by our Condition
+    // const click2 = fromEvent(documents, 'click');
+    // const timer = interval(1000).pipe(take(10)); 
+    // const clicksOrTimer = merge(clicks, timer);
+    // clicksOrTimer.subscribe(x => this.createElem.print(x,'list'));
+
+
+
+    // map OPerator ==========================================================================================
+
+
+    // const click3 = fromEvent<PointerEvent>(document, 'click');
+    // const positions = click3.pipe(map(ev => ev.clientY));
+    
+    // positions.subscribe(x => console.log(x));
+
+
+    // normal observable creation  ===========================================================================
     // const observable$ = new Observable((observer) => {
 
     //   setTimeout(() => {
@@ -151,75 +219,69 @@ let array2=['a','b','c','d','e'];
     //   setTimeout(()=>{
     //     observer.complete();
     //   },5000);
-      
+
     // });
     // console.log('before any one subscripe');
 
     //  1st subscriber 
-  //  this.obj1= observable$.subscribe(res=>{
-  //     console.log(res)
-      
-      
-      // this.createElem.print(res,'list')
-      
-     
-      // next(x) {
-      //   console.log(`${x}-obj1`)
-      // },
-      // error(error) {
-      //   console.log(error)
-      // },
-      // complete() {
-      //   console.log('completed');
+    //  this.obj1= observable$.subscribe(res=>{
+    //     console.log(res)
 
-        
-      // }
+
+    // this.createElem.print(res,'list')
+
+
+    // next(x) {
+    //   console.log(`${x}-obj1`)
+    // },
+    // error(error) {
+    //   console.log(error)
+    // },
+    // complete() {
+    //   console.log('completed');
+
+
+    // }
     // },
     // (error)=>{
     //   console.log(error);
     //   this.techStatus='inComplete'
-      
+
     // },
     // ()=>{
     //   console.log('completed')
     //   this.techStatus='complete'
     // }
-    
+
     // );
 
 
 
     // sub 2 
-//     this.obj2 = observable$.subscribe({
-// next:(res)=>{
-//   this.createElem.print(res,'list')
-// },error:()=>{
+    //     this.obj2 = observable$.subscribe({
+    // next:(res)=>{
+    //   this.createElem.print(res,'list')
+    // },error:()=>{
 
-// },complete:()=>{
+    // },complete:()=>{
 
-// }
+    // }
 
-//     });
-
-
-
-
-
-// operator 
+    //     });
 
 
 
 
 
-
-
-
-
-
+    // operator 
 
 
   }
+  onClick() {
 
+
+    this.createElem.create("input")
+  }
 
 
 }

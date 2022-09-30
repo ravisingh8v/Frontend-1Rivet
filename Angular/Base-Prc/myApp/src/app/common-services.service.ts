@@ -12,7 +12,11 @@ export class CommonServicesService {
     document.getElementById(elemId)?.appendChild(el)
   }
 
-  send(){
-    
+  create(elemId:any){
+    let el = document.createElement('input');
+    el.type='text'
+    el.placeholder='enter your name'
+    el.innerHTML
+    document.getElementById(elemId)?.appendChild(el)
   }
 }
