@@ -1,6 +1,6 @@
 import { Conditional } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable, of, map, pipe, from, concat, fromEvent, forkJoin, timer, interval, merge, take } from 'rxjs';
+import { Observable, of, map, pipe, from, concat, fromEvent, forkJoin, timer, interval, merge, take, debounceTime, filter, distinct, tap } from 'rxjs';
 import { CommonServicesService } from 'src/app/common-services.service';
 
 
@@ -104,7 +104,7 @@ export class ObservableComponent implements OnInit {
     let array1 = [1, 2, 3, 4, 5];
     let array2 = ['a', 'b', 'c', 'd', 'e'];
 
-    // from([array1,array2,'toh kese hein app log']).subscribe({next:(x)=>{
+    // from([array1,array2,'hello how are you']).subscribe({next:(x)=>{
     //   console.log(x);
     //   this.createElem.print(x,'list')
 
@@ -118,7 +118,7 @@ export class ObservableComponent implements OnInit {
 
 
     // of using array ===========================
-    // of(array1,array2,'toh kese hein aap log')    
+    // of(array1,array2,'hello how are you')    
     //    .subscribe({
     //       next:(x)=>{
     //         this.createElem.print(x,'list')
@@ -127,16 +127,18 @@ export class ObservableComponent implements OnInit {
     //     });
 
 
-    const documents = document.querySelectorAll('#btn1')
+    // from event 
 
-    const clicks = fromEvent(documents, 'click')
+    // const documents = document.querySelectorAll('#btn1')
 
-    clicks.subscribe({
-      next: () => {
-        this.createElem.print(this.x, 'list')
-      }
+    // const clicks = fromEvent(documents, 'click')
 
-    })
+    // clicks.subscribe({
+    //   next: () => {
+    //     this.createElem.print(this.x, 'list')
+    //   }
+
+    // })
 
 
 
@@ -192,8 +194,60 @@ export class ObservableComponent implements OnInit {
 
     // const click3 = fromEvent<PointerEvent>(document, 'click');
     // const positions = click3.pipe(map(ev => ev.clientY));
-    
+
     // positions.subscribe(x => console.log(x));
+
+
+    // let input = document.querySelectorAll('input')
+    // const click4 = fromEvent(input, 'keydown');
+    // const result = click4.pipe(debounceTime(1000)).subscribe((x) => console.log(x))
+
+//---------------------filter------------------------ =========================================================
+
+
+
+// of(1,2,3,4,5,6,7,2,6,7,5).pipe(filter(x => x !== 2 )).subscribe(x=>console.log(x));
+
+
+
+// ==================================================distinct===================================================
+
+// ex:1
+// of({age:2,name:'ramesh'},{age:3,name:'suresh'},{age:2,name:'ramesh'}).pipe(distinct()).subscribe(x=>console.log(x));
+
+
+// defination - only check single value or check via keyvalue 
+
+
+// ex:2
+// of(1, 1, 2, 2, 2, 1, 2, 3, 4, 3, 2, 1)
+//   .pipe(distinct())
+//   .subscribe(x => console.log(x));
+
+
+// ex:3
+
+// const obj = of({ age: 30, names: 'Samkeet' },
+//     { age: 30, names: 'Samkeet' },
+//     { age: 30, names: 'Samkeet' },
+//     { age: 30, names: 'Samkeet' });s
+
+
+//     obj.pipe(distinct(({names}) => names)).subscribe(x => console.log(x));
+
+
+// ================================================ Tap =======================================================
+
+
+// const msg = prompt('enter Number')
+// of(msg).pipe(
+//   tap(console.log),
+//   map(n => n > 4 ? 'big' : 'small')
+// ).subscribe(console.log);
+
+
+// ==============================================         ====================================================
+
 
 
     // normal observable creation  ===========================================================================
