@@ -5,35 +5,38 @@ import { Observable } from 'rxjs';
 
 
 @Injectable()
+
 export class EmployeeService {
-baseUrl="http://localhost:3000/"
-  constructor( private http:HttpClient,
-    
-    ) { }
+  public baseUrl: string
 
+  constructor(
+    private http: HttpClient,
+  ) {
+    this.baseUrl = "http://localhost:3000/"
+  }
+  // Perfoming Http Methods 
+  getData(): Observable<any> {
+    const url = this.baseUrl + 'users'
+    return this.http.get(url)
+  }
 
-    getData(): Observable<any>{
-      const url = this.baseUrl + 'users'
-      return this.http.get(url)
-    }
+  postData(user: Employee[]): Observable<any> {
+    const url = this.baseUrl + 'users'
+    return this.http.post(url, user)
+  }
 
-    postData(user:Employee[]):Observable<any>{
-      const url = this.baseUrl + 'users'
-      return this.http.post(url,user)
-    }
+  onDelete(id: number): Observable<any> {
+    const url = this.baseUrl + 'users/' + id;
+    return this.http.delete(url)
+  }
 
-    onDelete(id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id ;
-      return this.http.delete(url)
-    }
-    
-    editData(employee:Employee[] ,id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id ;
-      return this.http.put(url,employee)
-    }
+  editData(employee: Employee[], id: number): Observable<any> {
+    const url = this.baseUrl + 'users/' + id;
+    return this.http.put(url, employee)
+  }
 
-    getEmployeeById(id: number): Observable<any> {
-      const url = this.baseUrl + 'users/'+ id;
-      return this.http.get(url);
-    }
+  getEmployeeById(id: number): Observable<any> {
+    const url = this.baseUrl + 'users/' + id;
+    return this.http.get(url);
+  }
 }

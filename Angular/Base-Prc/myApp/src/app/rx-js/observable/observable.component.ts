@@ -202,51 +202,53 @@ export class ObservableComponent implements OnInit {
     // const click4 = fromEvent(input, 'keydown');
     // const result = click4.pipe(debounceTime(1000)).subscribe((x) => console.log(x))
 
-//---------------------filter------------------------ =========================================================
+    //---------------------filter------------------------ =========================================================
 
 
 
-// of(1,2,3,4,5,6,7,2,6,7,5).pipe(filter(x => x !== 2 )).subscribe(x=>console.log(x));
+    // of(1,2,3,4,5,6,7,2,6,7,5).pipe(filter(x => x !== 2 )).subscribe(x=>console.log(x));
 
 
 
-// ==================================================distinct===================================================
+    // ==================================================distinct===================================================
 
-// ex:1
-// of({age:2,name:'ramesh'},{age:3,name:'suresh'},{age:2,name:'ramesh'}).pipe(distinct()).subscribe(x=>console.log(x));
-
-
-// defination - only check single value or check via keyvalue 
+    // ex:1
+    // of({age:2,name:'ramesh'},{age:3,name:'suresh'},{age:2,name:'ramesh'}).pipe(distinct()).subscribe(x=>console.log(x));
 
 
-// ex:2
-// of(1, 1, 2, 2, 2, 1, 2, 3, 4, 3, 2, 1)
-//   .pipe(distinct())
-//   .subscribe(x => console.log(x));
+    // defination - only check single value or check via keyvalue 
 
 
-// ex:3
-
-// const obj = of({ age: 30, names: 'Samkeet' },
-//     { age: 30, names: 'Samkeet' },
-//     { age: 30, names: 'Samkeet' },
-//     { age: 30, names: 'Samkeet' });s
+    // ex:2
+    // of(1, 1, 2, 2, 2, 1, 2, 3, 4, 3, 2, 1)
+    //   .pipe(distinct())
+    //   .subscribe(x => console.log(x));
 
 
-//     obj.pipe(distinct(({names}) => names)).subscribe(x => console.log(x));
+    // ex:3
+
+    // const obj = of({ age: 30, names: 'Samkeet' },
+    //     { age: 30, names: 'Samkeet' },
+    //     { age: 30, names: 'Samkeet' },
+    //     { age: 30, names: 'Samkeet' });s
 
 
-// ================================================ Tap =======================================================
+    //     obj.pipe(distinct(({names}) => names)).subscribe(x => console.log(x));
 
 
-// const msg = prompt('enter Number')
-// of(msg).pipe(
-//   tap(console.log),
-//   map(n => n > 4 ? 'big' : 'small')
-// ).subscribe(console.log);
+    // ================================================ Tap =======================================================
 
 
-// ==============================================         ====================================================
+    const msg = prompt('enter Number only')
+
+
+    of(msg).pipe(
+      tap(console.log),
+      map(n => n > 4 ? 'big' : 'small')
+    ).subscribe(console.log);
+
+
+    // ==============================================         ====================================================
 
 
 

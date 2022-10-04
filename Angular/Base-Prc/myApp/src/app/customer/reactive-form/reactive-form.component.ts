@@ -19,16 +19,16 @@ export class ReactiveFormComponent implements OnInit {
     this.isSubmit = false
 
     this.form = this.formBuild.group({
-      firstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z\w]+$')]] ,
-      lastName: ['', [Validators.required]] ,
-      userName: ['', [Validators.required ]] ,
-      mail: ['', [Validators.required]] ,
+      firstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
+      lastName: ['', [Validators.required]],
+      userName: ['', [Validators.required]],
+      mail: ['', [Validators.required]],
       address: this.formBuild.group({
-        city:['',[Validators.required]],
-        state:['',[Validators.required]],
-        zip:['',[Validators.required]]
+        city: ['', [Validators.required]],
+        state: ['', [Validators.required]],
+        zip: ['', [Validators.required]]
 
-      }) ,
+      }),
     })
   }
 
@@ -37,7 +37,7 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   // get adrress(){
-  
+
   // }
   ngOnInit(): void {
   }

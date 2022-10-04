@@ -17,7 +17,8 @@ export class EmployeeFormComponent implements OnInit {
   public id: any
   public title: string
   public isSubmit: boolean
-  public btn:string
+  public btn: string
+
   constructor(
     public formbuilder: FormBuilder,
     private usersService: EmployeeService,
@@ -30,7 +31,7 @@ export class EmployeeFormComponent implements OnInit {
     this.data = []
     this.title = 'Add Employee'
     this.btn = 'Save'
-    
+
 
     // form validation 
     this.form = this.formbuilder.group({
@@ -91,7 +92,6 @@ export class EmployeeFormComponent implements OnInit {
           this.getUserDetails();
 
         });
-
       }
       this.onReset()
       this.route.navigate(['employee/list'])

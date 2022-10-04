@@ -11,9 +11,10 @@ import { Employee } from '../employee.model';
 export class EmployeeListComponent implements OnInit {
   @Input() data: Employee[]
   constructor(private usersService: EmployeeService,
-    private route :Router,
-    private router:ActivatedRoute) {
-this.data = []
+    private route: Router,
+    private actRouter: ActivatedRoute
+  ) {
+    this.data = []
 
   }
 
@@ -21,10 +22,12 @@ this.data = []
 
   }
 
-  onEdit(id:any){
+  onEdit(id: any) {
     // this.usersService.editData(id)
-  this.route.navigate(['employee/edit',id])
-  
+
+    // relative to its define relation 
+    this.route.navigate(['./edit', id], { relativeTo: this.actRouter.parent })
+
   }
 
   onDelete(id: any) {
@@ -32,10 +35,10 @@ this.data = []
       this.getUserDetails()
     })
   }
-  getDetails(id:any){
-    this.route.navigate(['employee/details',id])
+  getDetails(id: any) {
+    this.route.navigate(['employee/details', id],)
   }
-  
+
   getUserDetails() {
     this.usersService.getData().subscribe((Response: any) => {
       this.data = Response
