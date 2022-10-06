@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from '../service/employee.service';
 import { Employee } from '../employee.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-employee-form',
@@ -12,24 +13,43 @@ export class EmployeeFormComponent implements OnInit {
 
   public data: Employee[]
   public form: FormGroup
+  public id: any
 
   constructor(
+    public actRouter: ActivatedRoute,
     public formbuilder: FormBuilder,
     private usersService: EmployeeService) {
 
     this.data = []
     this.form = this.formbuilder.group({
-    
+
       name: ['', [Validators.required]],
       email: ['', []]
       // name:['',[]]
     })
 
 
+    this.actRouter.params.subscribe(res => {
+      this.id = res['id']
+
+      if (this.id) {
+
+        this.getElementById()
+        console.log(res);
+        console.log('mera naaaam nhi id hai ' + this.id['id']);
+      }
+
+
+    })
   }
+
 
   ngOnInit(): void {
     this.getUserDetails()
+  }
+
+  ngAfterViewInit(): void {
+
   }
 
   getUserDetails() {
@@ -38,16 +58,37 @@ export class EmployeeFormComponent implements OnInit {
     })
   }
 
+
+  getuserdetails2() { this.usersService.getData2().subscribe(res => this.data = res) }
+
   onSubmit() {
 
     if (this.form.valid) {
-      this.usersService.postData(this.form.value).subscribe((Response: any) => {
-        this.getUserDetails();
-      })
+
+      if (this.id) {
+        this.usersService.editData(this.form.value, this.id).subscribe(res => {
+          // this.form = res;
+          // this.getUserDetails();
+        }
+        )
+      } else {
+        this.usersService.postData(this.form.value).subscribe((Response: any) => {
+          this.getUserDetails();
+        })
+      }
     } else {
       alert('form is not valid')
     }
-
   }
 
+  getElementById() {
+    this.usersService.getUserById(this.id).subscribe(res =>
+
+      // console.log(res)
+      this.form.patchValue(res)
+    )
+
+
+  }
 }
+

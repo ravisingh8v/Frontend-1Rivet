@@ -6,34 +6,46 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class EmployeeService {
-baseUrl="http://localhost:3000/"
-  constructor( private http:HttpClient,
-    
-    ) { }
+  public baseUrl: string
+  // baseUrl = "http://localhost:3000/"
+
+  constructor(private http: HttpClient) {
+    this.baseUrl = "http://localhost:3000/"
+
+  }
 
 
-    getData(): Observable<any>{
-      const url = this.baseUrl + 'users'
-      return this.http.get(url)
-    }
+  getData(): Observable<any> {
+    const url = this.baseUrl + 'users'
+    return this.http.get(url)
+  }
 
-    postData(user:Employee):Observable<any>{
-      const url = this.baseUrl + 'users'
-      return this.http.post(url,user)
-    }
+  postData(user: Employee[]): Observable<any> {
+    const url = this.baseUrl + 'users'
+    return this.http.post(url, user)
+  }
 
-    onDelete(id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id 
-      return this.http.delete(url)
-    }
-    editData(user:Employee,id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id 
-      return this.http.put(url,user)
-    }
+  onDelete(id: number): Observable<any> {
+    const url = this.baseUrl + 'users/' + id
+    return this.http.delete(url)
+  }
+  editData(user: Employee[], id: number): Observable<any> {
+    const url = this.baseUrl + 'users/' + id
+    return this.http.put(url, user)
+  }
 
-    getUserById(id:number):Observable<any>{
-      const url = this.baseUrl + 'users/' + id 
-      return this.http.get(url)
-    }
-    
+  getUserById(id: number): Observable<any> {
+    const url = this.baseUrl + 'users/' + id
+    return this.http.get(url)
+  }
+
+
+
+
+
+  getData2(): Observable<any> {
+    const url = this.baseUrl + 'users/';
+    return this.http.get(url)
+  }
+
 }

@@ -3,13 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeComponent } from './employee.component';
 
-const routes: Routes = [{ path: '', component: EmployeeComponent, 
-children:
-[
-  {path:'', redirectTo:'list',pathMatch:'full' },
-  {path:':id', component:EmployeeFormComponent},
-  {path:'list', component:EmployeeFormComponent},
-] 
+const routes: Routes = [{
+  path: '', component: EmployeeComponent,
+  children:
+    [
+      { path: '', redirectTo: 'list', pathMatch: 'full' },
+      { path: 'edit/:id', component: EmployeeFormComponent },
+      { path: 'list', component: EmployeeFormComponent },
+    ]
 }];
 
 @NgModule({
