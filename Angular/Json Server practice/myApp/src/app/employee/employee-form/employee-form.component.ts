@@ -29,28 +29,39 @@ export class EmployeeFormComponent implements OnInit {
     })
 
 
+    // this.actRouter.params.subscribe(res => {
+    //   this.id = res['id']
+
+    //   if (this.id) {
+
+    //     this.getElementById()
+    //     console.log(res);
+    //     console.log('mera naaaam nhi id hai ' + this.id['id']);
+    //   }
+
+
+    // })
     this.actRouter.params.subscribe(res => {
       this.id = res['id']
-
-      if (this.id) {
-
-        this.getElementById()
-        console.log(res);
-        console.log('mera naaaam nhi id hai ' + this.id['id']);
-      }
-
-
+      // console.log(res);
     })
   }
 
 
   ngOnInit(): void {
     this.getUserDetails()
+
   }
 
   ngAfterViewInit(): void {
 
   }
+
+  getValue(value: Employee) {
+    this.form.patchValue(value)
+  }
+
+
 
   getUserDetails() {
     this.usersService.getData().subscribe((Response: any) => {
@@ -59,7 +70,7 @@ export class EmployeeFormComponent implements OnInit {
   }
 
 
-  getuserdetails2() { this.usersService.getData2().subscribe(res => this.data = res) }
+  // getuserdetails2() { this.usersService.getData2().subscribe(res => this.data = res) }
 
   onSubmit() {
 
@@ -68,7 +79,7 @@ export class EmployeeFormComponent implements OnInit {
       if (this.id) {
         this.usersService.editData(this.form.value, this.id).subscribe(res => {
           // this.form = res;
-          // this.getUserDetails();
+          this.getUserDetails();
         }
         )
       } else {
@@ -81,14 +92,14 @@ export class EmployeeFormComponent implements OnInit {
     }
   }
 
-  getElementById() {
-    this.usersService.getUserById(this.id).subscribe(res =>
+  // getElementById() {
+  //   this.usersService.getUserById(this.id).subscribe(res =>
 
-      // console.log(res)
-      this.form.patchValue(res)
-    )
+  //     // console.log(res)
+  //     this.form.patchValue(res)
+  //   )
+  // }
 
 
-  }
 }
 

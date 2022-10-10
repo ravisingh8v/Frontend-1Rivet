@@ -16,6 +16,6 @@
 </div>
 
 <div>
-  <app-employee-list [data]="data"></app-employee-list>
-  <span *ngIf="!data.length">no record-found</span>
+  <app-employee-list [data]="data" (patchValue)="getValue($event)"></app-employee-list>
+  <span *ngIf="!data">no record-found</span>
 </div>

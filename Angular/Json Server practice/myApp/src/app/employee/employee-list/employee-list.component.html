@@ -13,12 +13,12 @@
             <td>{{item.name}}</td>
             <td>{{item.email}}</td>
             <td>
-                <button class="btn btn-info">details</button>
-                <button class="btn btn-warning" (click)="onEdit(item.id)" [routerLink]="['../',item.id ]">edit</button>
-                <button class="btn btn-danger" (click)="onDelete(item.id)">delete</button>
+                <div class="btn-group">
+                    <button class="btn btn-info" (click)="onView(item)">details</button>
+                    <button class="btn btn-warning" (click)="onEdit(item)">edit</button>
+                    <button class="btn btn-danger" (click)="onDelete(item.id)">delete</button>
+                </div>
             </td>
         </tr>
-        <tr id="tr"></tr>
     </tbody>
 </table>
-<h1>this testing h1 </h1>

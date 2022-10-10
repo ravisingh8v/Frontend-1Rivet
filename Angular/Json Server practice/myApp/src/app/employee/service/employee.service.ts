@@ -20,28 +20,24 @@ export class EmployeeService {
     return this.http.get(url)
   }
 
-  postData(user: Employee[]): Observable<any> {
+  postData(user: Employee[]): Observable<Employee> {
     const url = this.baseUrl + 'users'
     return this.http.post(url, user)
   }
 
-  onDelete(id: number): Observable<any> {
+  onDelete(id: number): Observable<Employee> {
     const url = this.baseUrl + 'users/' + id
     return this.http.delete(url)
   }
-  editData(user: Employee[], id: number): Observable<any> {
+  editData(user: Employee[], id: number): Observable<Employee> {
     const url = this.baseUrl + 'users/' + id
     return this.http.put(url, user)
   }
 
-  getUserById(id: number): Observable<any> {
+  getUserById(id: number): Observable<Employee> {
     const url = this.baseUrl + 'users/' + id
     return this.http.get(url)
   }
-
-
-
-
 
   getData2(): Observable<any> {
     const url = this.baseUrl + 'users/';

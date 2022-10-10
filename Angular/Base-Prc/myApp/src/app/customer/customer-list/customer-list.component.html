@@ -1,18 +1,17 @@
 <p>customer-list works!</p>
 <div>
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        <tr *ngFor="let customer of customers">
-            <!-- this is the way for going step back and give path as id for object -->
-            <td >{{customer.name}}</td> 
-            <td >{{customer.email}}</td><button [routerLink]="['../edit',customer.id]">edit</button>
-        </tr>
-    </thead>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <tr *ngFor="let customer of customers">
+                <!-- this is the way for going step back and give path as id for object -->
+                <td>{{customer.name}}</td>
+                <td>{{customer.email}}</td><button [routerLink]="['../edit',customer.id]">edit</button>
+            </tr>
+        </thead>
+    </table>
 </div>
 <button routerLink="../add-customer">Add customer</button>
-
