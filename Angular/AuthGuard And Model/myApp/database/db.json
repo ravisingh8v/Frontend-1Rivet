@@ -1,0 +1,29 @@
+{
+  "loginList": [
+    {
+      "id": 1,
+      "username": "ravisingh",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "username": "dummy1",
+      "password": "pass123"
+    },
+    {
+      "id": 3,
+      "username": "dummy2",
+      "password": "pass123"
+    },
+    {
+      "id": 4,
+      "username": "dummy3",
+      "password": "pass123"
+    },
+    {
+      "id": 5,
+      "username": "dummy4",
+      "password": "pass123"
+    }
+  ]
+}

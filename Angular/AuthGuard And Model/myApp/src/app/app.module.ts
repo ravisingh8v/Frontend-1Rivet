@@ -3,38 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DirectivesModule } from './directives/directives.module';
-import { PipesModule } from './pipes/pipes.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './error/error.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LogInComponent } from './log-in/log-in.component';
-
+import { ApiService } from './service/api.service';
+import { AuthGuard } from './service/auth.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ErrorComponent,
-    LogInComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DirectivesModule,
-    PipesModule,
-
+    NgbModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  exports: [
+    CoreModule,
 
   ],
-  providers: [],
+  providers: [ApiService,
+    AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
