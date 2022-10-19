@@ -9,7 +9,7 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './service/api.service';
-import { AuthGuard } from './service/auth.guard';
+import { AuthGuard } from './core/guard/auth.guard';
 
 @NgModule({
   declarations: [

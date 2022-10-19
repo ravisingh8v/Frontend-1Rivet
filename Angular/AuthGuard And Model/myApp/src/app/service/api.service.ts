@@ -11,8 +11,8 @@ export class ApiService {
     this.baseUrl = 'http://localhost:3000/loginList';
   }
 
-  getData() {
-    return this.http.get(this.baseUrl)
+  getData(): Observable<loginUser[]> {
+    return this.http.get<loginUser[]>(this.baseUrl)
   }
 
 }

@@ -4,12 +4,14 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../service/api.service';
+import { HeaderComponent } from './navbar/header/header.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { ApiService } from '../service/api.service';
     ReactiveFormsModule,
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ]
 })
 export class CoreModule { }

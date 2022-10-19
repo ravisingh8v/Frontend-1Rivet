@@ -27,13 +27,16 @@ export class LoginComponent implements OnInit {
     this.icon = 'eye-slash';
     this.type = 'password';
     // this.loginData = '';
-    this.form = formBuilder.group({
+    this.form = this.formBuilder.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]]
     })
 
   };
 
+  /**
+   * password hide and show feature 
+   */
   onEyeClick() {
     if (this.icon === 'eye-slash') {
       this.icon = 'eye';
@@ -43,23 +46,29 @@ export class LoginComponent implements OnInit {
       this.type = 'password';
     }
   };
+  /**
+   * after login check authorized user
+   */
 
   onLogin() {
-    this.loginUserService.getData().subscribe((res: any) => {
-      this.loginData = res
-    })
-    setTimeout(() => {
-      if (this.loginData.usernames === this.form.value.username) {
+    this.loginUserService.getData().subscribe((res: loginUser[]) => {
+      let userData = res.find((user: loginUser) => (user.username === this.form.value.username) && (user.password === this.form.value.password))
+      if (userData) {
+        localStorage.setItem('isAuth', 'true');
         this.route.navigate(['home'])
+        // alert('success')
       } else {
-        alert('wrong')
+        alert('Your Credential is Wrong')
       }
-      console.log(this.loginData);
-    }, 2000);
+
+
+    })
 
 
   }
+
   ngOnInit(): void {
+
   };
 
 };
