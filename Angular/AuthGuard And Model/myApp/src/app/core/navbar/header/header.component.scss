@@ -1,4 +1,28 @@
-p {
-    padding: 20px;
-    background-color: grey;
+.profile-wrapper {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: auto;
+
+    }
+}
+
+.profile-content {
+    width: 250px;
+    // transform: translateX(-200px);
+    transition: all 5s linear;
+
+    a {
+        display: block;
+        padding: 20px;
+        background-color: lightcyan;
+        margin: 1px;
+    }
+}
+
+.navbar {
+    z-index: 2000;
 }

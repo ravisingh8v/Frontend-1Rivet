@@ -33,6 +33,7 @@ $myApp-theme: mat.define-light-theme((color: (primary: $myApp-primary,
 @include mat.all-component-themes($myApp-theme);
 
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/cdk/overlay-prebuilt.css';
 
 @import 'assets/scss/vender/index';
 @import 'assets/scss/base/index';

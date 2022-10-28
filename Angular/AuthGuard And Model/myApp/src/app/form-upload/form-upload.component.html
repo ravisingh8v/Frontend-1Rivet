@@ -1,0 +1,5 @@
+<form action="" [formGroup]="form">
+    <input type="file" formControlName="file" (change)="onFileSelected($event)" #fileUpload>
+    <p></p>
+    <button type="submit" (click)="onUpload()">Submit</button>
+</form>

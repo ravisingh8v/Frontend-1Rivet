@@ -11,7 +11,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" routerLink="fileUpload">file-upload</a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -33,8 +33,32 @@
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success me-3" type="submit">Search</button>
             </form>
         </div>
+
+        <div class="position-relative h-100">
+
+            <div class="profile-wrapper rounded-pill border border-1 border-success position-relative">
+                <a (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+                    <img src="../../../../assets/images/pic.jpg" alt=""></a>
+            </div>
+
+
+            <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+                <div class="example-overlay profile-content bg-white border border-2 border-success mt-4">
+                    <a>Update Profile</a>
+                    <a (click)="openPassword()">Change Password</a>
+                    <a>Settings</a>
+                    <a>
+                        <button class="btn btn-danger ms-3" (click)="logout()">logout</button>
+                    </a>
+                </div>
+            </ng-template>
+
+        </div>
+
+
+
     </div>
 </nav>

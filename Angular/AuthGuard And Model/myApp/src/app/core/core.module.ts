@@ -1,26 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ApiService } from '../service/api.service';
 import { HeaderComponent } from './navbar/header/header.component';
-
+import { AuthService } from './service/auth.service';
+import { OverlayModule } from "@angular/cdk/overlay";
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
     HeaderComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule,
+    OverlayModule
   ],
   exports: [
-    LoginComponent,
     HeaderComponent
+  ], providers: [
+    AuthService
   ]
 })
 export class CoreModule { }

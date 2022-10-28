@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiService } from 'src/app/service/api.service';
-import { loginUser } from './login-model';
+import { UserApiService } from 'src/app/users/user-api.service';
+import { userModel } from '../user-model';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
    */
   constructor(private route: Router,
     private formBuilder: FormBuilder,
-    private loginUserService: ApiService
+    private loginUserService: UserApiService
   ) {
     this.icon = 'eye-slash';
     this.type = 'password';
@@ -51,13 +51,14 @@ export class LoginComponent implements OnInit {
    */
 
   onLogin() {
-    this.loginUserService.getData().subscribe((res: loginUser[]) => {
-      let userData = res.find((user: loginUser) => (user.username === this.form.value.username) && (user.password === this.form.value.password))
+    this.loginUserService.getData().subscribe((res: userModel[]) => {
+      let userData = res.find((user: userModel) => (user.username === this.form.value.username) && (user.password === this.form.value.password))
       if (userData) {
         localStorage.setItem('isAuth', 'true');
         this.route.navigate(['home'])
         // alert('success')
       } else {
+        console.warn('wrong');
         alert('Your Credential is Wrong')
       }
 

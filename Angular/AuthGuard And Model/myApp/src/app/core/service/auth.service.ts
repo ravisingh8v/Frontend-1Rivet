@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-// import { BehaviorSubject } from 'rxjs';
-@Injectable({
-  providedIn: 'root'
-})
+import { BehaviorSubject } from 'rxjs';
+@Injectable()
 export class AuthService {
 
   /**
@@ -10,9 +8,9 @@ export class AuthService {
    */
 
 
-  // public loginUserBSubject: BehaviorSubject<boolean>
+  public loginUserBSubject: BehaviorSubject<boolean>
   constructor() {
-    // this.loginUserBSubject = new BehaviorSubject(true)
+    this.loginUserBSubject = new BehaviorSubject(true)
   }
 
   /**
@@ -22,11 +20,13 @@ export class AuthService {
   loginAuthentication() {
     let isAuthenticated = localStorage.getItem('isAuth')
     if (isAuthenticated === 'true') {
-      // this.loginUserBSubject.next(true);  
+      this.loginUserBSubject.next(true);
       return true;
+
     } else {
-      // this.loginUserBSubject.next(false);
+      this.loginUserBSubject.next(false);
       return false;
     }
+
   }
 }

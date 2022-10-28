@@ -24,6 +24,24 @@
       "id": 5,
       "username": "dummy4",
       "password": "pass123"
+    },
+    {
+      "firstname": "samkeet",
+      "lastname": "bhatia",
+      "username": "bhatia4v",
+      "email": "samkeetbhatia@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "firstname": "amresh",
+      "lastname": "prasad",
+      "username": "amresh07",
+      "email": "amreshprasad@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": 7
     }
   ]
 }
