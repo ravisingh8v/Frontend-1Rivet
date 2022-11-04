@@ -60,6 +60,7 @@ export class LoginComponent implements OnInit {
       } else {
         console.warn('wrong');
         alert('Your Credential is Wrong')
+
       }
 
 

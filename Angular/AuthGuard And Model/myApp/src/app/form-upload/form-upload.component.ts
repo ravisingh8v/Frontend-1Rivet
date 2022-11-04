@@ -44,7 +44,7 @@ export class FormUploadComponent implements OnInit {
 
       formData.append("thumbnail", file, "sjdfbbf");
 
-      const upload$ = this.http.post("https://upload.uploadcare.com/base/", formData);
+      const upload$ = this.http.post("https://localhost:3000/file", formData);
 
       upload$.subscribe()
     }

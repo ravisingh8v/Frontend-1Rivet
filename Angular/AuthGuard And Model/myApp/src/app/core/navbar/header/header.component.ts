@@ -2,6 +2,7 @@ import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from "@angular/cdk/portal";
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { OverlayService } from 'src/app/shared/service/overlay.service';
 import { ChangePasswordFormComponent } from 'src/app/users/change-password-form/change-password-form.component';
 @Component({
   selector: 'app-header',
@@ -13,7 +14,8 @@ export class HeaderComponent implements OnInit {
   @Output() clicked: EventEmitter<boolean>
 
   overlayRef!: OverlayRef;
-  constructor(private route: Router, private overlay: Overlay) {
+  constructor(private route: Router, private overlay: Overlay,
+    private overlayService: OverlayService) {
     this.clicked = new EventEmitter
   }
 
@@ -27,10 +29,12 @@ export class HeaderComponent implements OnInit {
   openPassword() {
     console.log('cliked');
 
-    this.overlayRef = this.overlay.create()
-    const componentPortal = new ComponentPortal(ChangePasswordFormComponent);
-    this.overlayRef.addPanelClass('example-overlay');
-    this.overlayRef.attach(componentPortal);
+    this.overlayService.openOverlay(ChangePasswordFormComponent)
+
+    // this.overlayRef = this.overlay.create()
+    // const componentPortal = new ComponentPortal(ChangePasswordFormComponent);
+    // this.overlayRef.addPanelClass('example-overlay');
+    // this.overlayRef.attach(componentPortal);
 
   }
 }

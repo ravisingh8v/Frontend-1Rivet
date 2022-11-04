@@ -16,8 +16,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
   { path: 'fileUpload', component: FormUploadComponent, canActivate: [AuthGuard] },
-  // { path: 'changePassword', component: ChangePasswordFormComponent, canActivate: [AuthGuard] },
+  { path: 'changePassword', component: ChangePasswordFormComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent },
+  { path: 'company', loadChildren: () => import('./company/company.module').then(m => m.CompanyModule) },
 
   {
     path: '**', pathMatch: 'full',

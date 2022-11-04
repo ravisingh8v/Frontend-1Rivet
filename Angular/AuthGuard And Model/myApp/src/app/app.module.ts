@@ -21,6 +21,7 @@ import { OverlayModule } from "@angular/cdk/overlay";
 import { ChangePasswordFormComponent } from './users/change-password-form/change-password-form.component';
 import { FormUploadComponent } from './form-upload/form-upload.component';
 import { FileUploadService } from './form-upload/service/file-upload.service';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { FileUploadService } from './form-upload/service/file-upload.service';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
+    SharedModule
 
   ],
   providers: [
