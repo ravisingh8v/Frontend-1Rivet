@@ -1,0 +1,18 @@
+<div class="h-100 d-flex justify-content-center align-items-center">
+    <form [formGroup]="form">
+        <select name="" id="city" formControlName="country" class="form-select" (change)="onChangeCountry($event)">
+            <option value="" selected disabled>--country--</option>
+            <option *ngFor="let country of countries" value="{{country.id}}">{{country.country}}</option>
+        </select>
+
+        <select name="state" id="" class="form-select" formControlName="state" (change)="onChangeState($event)">
+            <option value="">--state--</option>
+            <option *ngFor="let state of statesData" value="{{state.id}}">{{state.state}}</option>
+        </select>
+
+        <select name="city" id="" formControlName="city" class="form-select">
+            <option value="">--city--</option>
+            <option *ngFor="let city of citiesData">{{city.city}}</option>
+        </select>
+    </form>
+</div>
